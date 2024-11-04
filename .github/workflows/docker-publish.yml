@@ -18,6 +18,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    environment: Oracle Cloud
     permissions:
       contents: read
       packages: write
