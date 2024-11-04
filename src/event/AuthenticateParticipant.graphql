@@ -1,0 +1,3 @@
+mutation AuthenticateParticipant($eventId: ID!, $name: String!, $pinCode: String!) {
+    authenticateParticipant(eventId: $eventId, name: $name, pinCode: $pinCode)
+}

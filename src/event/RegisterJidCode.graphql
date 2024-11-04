@@ -1,0 +1,5 @@
+mutation RegisterJidCode($input: RegisterFoundJidCode!) {
+    registerFoundJidCode(input: $input) {
+        id
+    }
+}

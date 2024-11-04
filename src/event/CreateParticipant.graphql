@@ -1,0 +1,7 @@
+mutation CreateParticipant($input: CreateParticipantInput!) {
+    createParticipant(input: $input) {
+        id
+        name
+        pinCode
+    }
+}

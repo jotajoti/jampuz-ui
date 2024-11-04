@@ -1,0 +1,36 @@
+query GetEvent($code: String!) {
+    authenticatedParticipant {
+        id
+        name
+        event {
+            id
+        }
+    }
+    event(code: $code) {
+        id
+        location {
+            name
+        }
+        code {
+            value
+        }
+        year
+        jidCodeStats {
+            count
+            uniqueCount
+            uniqueCountryCount
+            countryStats {
+                country
+                uniqueCount
+            }
+        }
+        participants {
+            id
+            name
+            jidCodeStats {
+                uniqueCount
+                uniqueCountryCount
+            }
+        }
+    }
+}
