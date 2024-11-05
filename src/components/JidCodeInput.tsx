@@ -56,7 +56,7 @@ export const JidCodeInput = ({onValidJidCode, jidCode, setJidCode}: JidCodeInput
             value={jidCode}
             placeholder="Add Code"
             onInput={onValueUpdated}
-            className={`input input-bordered input-sm tracking-widest font-mono text-center ${validJidCode ? 'input-success' : ''}`}
+            className={`input input-bordered input-lg tracking-widest font-mono text-center ${validJidCode ? 'input-success' : ''}`}
         />
     );
 }

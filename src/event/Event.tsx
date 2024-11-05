@@ -1,8 +1,8 @@
 import {useParams} from "react-router-dom";
-import {useQuery} from "urql";
+import {useQuery, useSubscription} from "urql";
 
 import {Layout} from "../Layout.tsx";
-import {GetEventDocument} from "../gql";
+import {EventSubscriptionDocument, GetEventDocument} from "../gql";
 import {Dashboard} from "../components/Dashboard.tsx";
 import {Map} from "../components/map";
 import {JidCodeHeader} from "./JidCodeHeader.tsx";
@@ -22,6 +22,13 @@ export const Event = () => {
         },
         requestPolicy: 'cache-first'
     });
+
+    useSubscription({
+        query: EventSubscriptionDocument,
+        variables: {
+            eventId: data!.event!.id
+        }
+    }, () => reloadEvent({requestPolicy: 'network-only'}));
 
     const navigationButtons = (
         <>

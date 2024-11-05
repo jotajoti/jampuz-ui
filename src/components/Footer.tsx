@@ -8,6 +8,22 @@ export const Footer = () => {
         query: FooterQueryDocument
     });
 
+    const uiVersion =
+        <a href={`https://github.com/jotajoti/jampuz-ui/releases/tag/v${APP_VERSION}`}
+           target="_blank"
+           className="link"
+           rel="noopener noreferrer">
+            {APP_VERSION}
+        </a>
+
+    const serverVersion =
+        <a href={`https://github.com/jotajoti/jampuz-server/releases/tag/v${data?.serverVersion}`}
+           target="_blank"
+           className="link"
+           rel="noopener noreferrer">
+            {data?.serverVersion}
+        </a>
+
     return (
         <footer className="footer items-center p-4 bg-neutral text-neutral-content">
             <aside className="grid-flow-col items-center">
@@ -16,8 +32,8 @@ export const Footer = () => {
                 <ThemeSelector/>
             </aside>
             <nav className="grid-flow-col gap-4 place-self-center justify-self-end hidden md:block">
-                Client version: {APP_VERSION} -
-                Server version: {data?.serverVersion}
+                Client version: {uiVersion} -
+                Server version: {serverVersion}
             </nav>
         </footer>
     )
