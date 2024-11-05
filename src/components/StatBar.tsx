@@ -1,5 +1,7 @@
+import {ReactNode} from "react";
+
 export type StatConfig = {
-    title: string
+    title: ReactNode
     value: string | number
 }
 

@@ -1,4 +1,5 @@
 import {useQuery} from "urql";
+import {Trans} from "@lingui/macro";
 
 import {FooterQueryDocument} from "../gql";
 import {ThemeSelector} from "./ThemeSelector.tsx";
@@ -32,8 +33,8 @@ export const Footer = () => {
                 <ThemeSelector/>
             </aside>
             <nav className="grid-flow-col gap-4 place-self-center justify-self-end hidden md:block">
-                Client version: {uiVersion} -
-                Server version: {serverVersion}
+                <Trans>Client version: {uiVersion}</Trans> -
+                <Trans>Server version: {serverVersion}</Trans>
             </nav>
         </footer>
     )

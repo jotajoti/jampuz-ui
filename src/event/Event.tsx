@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useQuery, useSubscription} from "urql";
+import {Trans} from "@lingui/macro";
 
 import {Layout} from "../Layout.tsx";
 import {EventSubscriptionDocument, GetEventDocument} from "../gql";
@@ -39,9 +40,15 @@ export const Event = () => {
         </>
     );
 
+    const locationName = data!.event!.location.name;
+    const eventYear = data!.event!.year;
     return (
         <Layout
-            navigationStart={<a className="btn btn-ghost text-xl">{data?.event?.location.name} {data?.event?.year}</a>}
+            navigationStart={
+                <a className="btn btn-ghost text-xl">
+                    <Trans comment="Event title">{locationName} {eventYear}</Trans>
+                </a>
+            }
             navigationCenter={<JidCodeHeader jidCode={data!.event!.code!.value}/>}
             navigationEnd={navigationButtons}
             subNav={<EventStatBar data={data!}/>}
@@ -49,7 +56,7 @@ export const Event = () => {
 
             <Dashboard columns={4} widgets={[{
                 key: "map",
-                title: "Map",
+                title: <Trans>Map</Trans>,
                 content: maximized => (
                     <div>
                         <Map detailed={maximized} countries={data!.event!.jidCodeStats.countryStats.map(country => ({
@@ -60,12 +67,12 @@ export const Event = () => {
                 )
             }, {
                 key: "participantList",
-                title: "Participants",
+                title: <Trans>Participants</Trans>,
                 span: 2,
                 content: <ParticipantsTable data={data!}/>
             }, {
                 key: "countriesList",
-                title: "Countries",
+                title: <Trans>Countries</Trans>,
                 content: <CountriesTable data={data!}/>
             }]}/>
         </Layout>

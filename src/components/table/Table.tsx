@@ -3,7 +3,7 @@ import {ChevronDownIcon, ChevronUpIcon} from "@heroicons/react/16/solid";
 
 export type ColumnDef<T> = {
     key: string
-    header: string
+    header: ReactNode
     getValue: (row: T) => ReactNode
     sort: (rowA: T, rowB: T) => number
     sortAscendingDefault: boolean

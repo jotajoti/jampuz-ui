@@ -1,6 +1,7 @@
 import {FormEvent, useState} from "react";
 import {useMaskito} from "@maskito/react";
 import type {MaskitoOptions} from "@maskito/core";
+import {t} from "@lingui/macro";
 
 type JidCodeInputProps = {
     onValidJidCode: (validJidCode: string | null) => void
@@ -54,7 +55,7 @@ export const JidCodeInput = ({onValidJidCode, jidCode, setJidCode}: JidCodeInput
             pattern={jidCodeRegex.source}
             required={true}
             value={jidCode}
-            placeholder="Add Code"
+            placeholder={t`Add Code`}
             onInput={onValueUpdated}
             className={`input input-bordered input-lg tracking-widest font-mono text-center ${validJidCode ? 'input-success' : ''}`}
         />
