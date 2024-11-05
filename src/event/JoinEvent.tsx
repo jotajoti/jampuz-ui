@@ -1,14 +1,16 @@
 import {forwardRef, SyntheticEvent, useImperativeHandle, useRef, useState} from "react";
 import {useMutation, UseQueryExecute} from "urql";
+import {t, Trans} from "@lingui/macro";
 
 import {Dialog, DialogAction, DialogRef} from "../components/Dialog.tsx";
 
 import {
     AuthenticateParticipantDocument,
     CreateParticipantDocument,
-    extractErrorCodes,
     GetEventQuery,
-    ServerErrorCode
+    hasErrorCode,
+    ServerErrorCode,
+    translateErrorCode
 } from "../gql";
 
 type JoinEventProps = {
@@ -46,9 +48,8 @@ const JoinEventDialog = forwardRef<DialogRef, JoinEventProps>(({data, reloadEven
         }, {requestPolicy: 'network-only'});
 
         if (result.error) {
-            const errorCodes = extractErrorCodes(result.error);
-            if (errorCodes.indexOf(ServerErrorCode.PARTICIPANT_NAME_NOT_AVAILABLE) > -1) {
-                setError("Participant name already taken.");
+            if (hasErrorCode(result.error, ServerErrorCode.PARTICIPANT_NAME_NOT_AVAILABLE)) {
+                setError(translateErrorCode(ServerErrorCode.PARTICIPANT_NAME_NOT_AVAILABLE));
             } else {
                 setError(result.error.message);
             }
@@ -60,7 +61,8 @@ const JoinEventDialog = forwardRef<DialogRef, JoinEventProps>(({data, reloadEven
             });
 
             if (authenticateResult.error) {
-                setError(`Couldn't authenticate ${authenticateResult.error.message}`);
+                const errorMessage = authenticateResult.error.message;
+                setError(t`Couldn't authenticate ${errorMessage}`);
             } else {
                 localStorage.setItem("token", authenticateResult.data!.authenticateParticipant!);
                 reloadEvent({requestPolicy: 'network-only'});
@@ -71,26 +73,29 @@ const JoinEventDialog = forwardRef<DialogRef, JoinEventProps>(({data, reloadEven
     }
 
     const actions: DialogAction[] = [{
-        label: "Cancel"
+        label: <Trans>Cancel</Trans>
     }, {
-        label: "Join",
+        label: <Trans>Join</Trans>,
         classNames: "btn-primary",
         onClick: onJoin
     }];
 
+    const locationName = data.event!.location.name;
+    const eventYear = data.event!.year;
+
     return (
         <Dialog ref={joinEventDialogRef}
-                title={`Join ${data.event!.location.name} ${data.event!.year}`}
+                title={<Trans comment="Join modal title">Join ${locationName} ${eventYear}</Trans>}
                 actions={actions}
                 onClose={closeDialog}
         >
             <form method="dialog" onSubmit={onJoin}>
                 <label className="form-control w-full">
                     <div className="label">
-                        <span className="label-text">What is your name?</span>
+                        <span className="label-text"><Trans>What is your name?</Trans></span>
                     </div>
                     <input type="text"
-                           placeholder="Name"
+                           placeholder={t`Name`}
                            required={true}
                            autoComplete="off"
                            value={name}
@@ -114,7 +119,7 @@ export const JoinEventButton = ({data, reloadEvent}: JoinEventProps) => {
 
     return (
         <>
-            <button className="btn btn-ghost" onClick={showDialog}>Join</button>
+            <button className="btn btn-ghost" onClick={showDialog}><Trans>Join</Trans></button>
             <JoinEventDialog ref={dialogRef} reloadEvent={reloadEvent} data={data}/>
         </>
     );

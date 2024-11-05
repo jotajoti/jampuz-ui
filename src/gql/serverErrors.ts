@@ -1,4 +1,5 @@
 import {CombinedError} from "@urql/core";
+import {t} from "@lingui/macro";
 
 export enum ServerErrorCode {
     PARTICIPANT_NAME_NOT_AVAILABLE = 1,
@@ -25,4 +26,14 @@ export const extractErrorCodes = (error: CombinedError | null): ServerErrorCode[
     });
 
     return serverErrorCodes;
+}
+
+export const hasErrorCode = (error: CombinedError | null, errorCode: ServerErrorCode) =>
+    extractErrorCodes(error).indexOf(errorCode) > -1;
+
+export const translateErrorCode = (errorCode: ServerErrorCode) => {
+    switch (errorCode) {
+        case ServerErrorCode.PARTICIPANT_NAME_NOT_AVAILABLE:
+            return t`Participant name already taken`
+    }
 }

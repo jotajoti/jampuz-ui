@@ -1,3 +1,5 @@
+import {Trans} from "@lingui/macro";
+
 import {StatBar} from "../components/StatBar.tsx";
 import {GetEventQuery} from "../gql";
 
@@ -9,13 +11,13 @@ export const EventStatBar = ({data}: EventStatBarProps) => {
     return (
         <StatBar config={{
             stats: [{
-                title: "Participants",
+                title: <Trans>Participants</Trans>,
                 value: data!.event!.participants.length
             }, {
-                title: "JID Codes",
+                title: <Trans>JID Codes</Trans>,
                 value: data!.event!.jidCodeStats.uniqueCount
             }, {
-                title: "Countries",
+                title: <Trans>Countries</Trans>,
                 value: data!.event!.jidCodeStats.uniqueCountryCount
             }]
         }}/>

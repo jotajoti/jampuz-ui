@@ -1,5 +1,6 @@
 import {forwardRef, SyntheticEvent, useImperativeHandle, useRef, useState} from "react";
 import {useMutation, UseQueryExecute} from "urql";
+import {Trans} from "@lingui/macro";
 
 import {Dialog, DialogAction, DialogRef} from "../components/Dialog.tsx";
 import {JidCodeInput} from "../components/JidCodeInput.tsx";
@@ -51,9 +52,9 @@ const AddJidCode = forwardRef<DialogRef, AddJidCodeProps>(({eventId, reloadEvent
     }
 
     const actions: DialogAction[] = [{
-        label: "Cancel"
+        label: <Trans>Cancel</Trans>
     }, {
-        label: "Save",
+        label: <Trans>Save</Trans>,
         classNames: "btn-primary",
         disabled: !validJidCode,
         onClick: save
@@ -61,7 +62,7 @@ const AddJidCode = forwardRef<DialogRef, AddJidCodeProps>(({eventId, reloadEvent
 
 
     return (
-        <Dialog ref={addJidCodeDialogRef} onClose={closeDialog} title="Add JID Code" actions={actions}>
+        <Dialog ref={addJidCodeDialogRef} onClose={closeDialog} title={<Trans>Add JID Code</Trans>} actions={actions}>
             <form method="dialog" onSubmit={save}>
                 <label className="form-control w-full">
                     <JidCodeInput onValidJidCode={setValidJidCode} jidCode={jidCode} setJidCode={setJidCode}/>
@@ -80,7 +81,7 @@ export const AddJidCodeButton = ({eventId, reloadEvent}: AddJidCodeProps) => {
 
     return (
         <>
-            <button className="btn btn-ghost" onClick={showDialog}>Add JID Code</button>
+            <button className="btn btn-ghost" onClick={showDialog}><Trans>Add JID Code</Trans></button>
             <AddJidCode ref={dialogRef} eventId={eventId} reloadEvent={reloadEvent}/>
         </>
     );

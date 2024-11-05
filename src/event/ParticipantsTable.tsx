@@ -1,3 +1,5 @@
+import {Trans} from "@lingui/macro";
+
 import {numberSort, stringSort, Table, TableDef} from "../components/table";
 import {ArrayElement} from "../utils.ts";
 import {GetEventQuery} from "../gql";
@@ -14,21 +16,21 @@ export const ParticipantsTable = ({data}: ParticipantsTableProps) => {
         rowClassNames: participant => participant.id === data.authenticatedParticipant?.id ? 'bg-accent text-accent-content' : '',
         columns: [{
             key: "name",
-            header: "Name",
+            header: <Trans>Name</Trans>,
             getValue: participant => participant.name,
             sort: stringSort(participant => participant.name),
             sortAscendingDefault: true,
             extraClassNames: "w-11/12"
         }, {
             key: "jidCodes",
-            header: "JID codes",
+            header: <Trans>JID codes</Trans>,
             getValue: participant => participant.jidCodeStats.uniqueCount,
             sort: numberSort(participant => participant.jidCodeStats.uniqueCount),
             sortAscendingDefault: false,
             extraClassNames: "text-right",
         }, {
             key: "countries",
-            header: "Countries",
+            header: <Trans>Countries</Trans>,
             getValue: participant => participant.jidCodeStats.uniqueCountryCount,
             sort: numberSort(participant => participant.jidCodeStats.uniqueCountryCount),
             sortAscendingDefault: false,

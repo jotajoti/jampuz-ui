@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2024-11-05 21:45+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. Event title
+#: src/event/Event.tsx:49
+msgid "{locationName} {eventYear}"
+msgstr "{locationName} {eventYear}"
+
+#: src/components/JidCodeInput.tsx:58
+msgid "Add Code"
+msgstr "Add Code"
+
+#: src/event/AddJidCode.tsx:65
+#: src/event/AddJidCode.tsx:84
+msgid "Add JID Code"
+msgstr "Add JID Code"
+
+#: src/event/AddJidCode.tsx:55
+#: src/event/JoinEvent.tsx:76
+msgid "Cancel"
+msgstr "Cancel"
+
+#: src/components/Footer.tsx:36
+msgid "Client version: {uiVersion}"
+msgstr "Client version: {uiVersion}"
+
+#: src/event/JoinEvent.tsx:65
+msgid "Couldn't authenticate {errorMessage}"
+msgstr "Couldn't authenticate {errorMessage}"
+
+#: src/event/CountriesTable.tsx:25
+msgid "Count"
+msgstr "Count"
+
+#: src/event/Event.tsx:75
+#: src/event/EventStatBar.tsx:20
+#: src/event/ParticipantsTable.tsx:33
+msgid "Countries"
+msgstr "Countries"
+
+#: src/event/CountriesTable.tsx:18
+msgid "Country"
+msgstr "Country"
+
+#: src/event/ParticipantsTable.tsx:26
+msgid "JID codes"
+msgstr "JID codes"
+
+#: src/event/EventStatBar.tsx:17
+msgid "JID Codes"
+msgstr "JID Codes"
+
+#: src/event/JoinEvent.tsx:78
+#: src/event/JoinEvent.tsx:122
+msgid "Join"
+msgstr "Join"
+
+#. Join modal title
+#: src/event/JoinEvent.tsx:88
+msgid "Join ${locationName} ${eventYear}"
+msgstr "Join ${locationName} ${eventYear}"
+
+#: src/event/Event.tsx:59
+msgid "Map"
+msgstr "Map"
+
+#: src/event/JoinEvent.tsx:98
+#: src/event/ParticipantsTable.tsx:19
+msgid "Name"
+msgstr "Name"
+
+#: src/gql/serverErrors.ts:37
+msgid "Participant name already taken"
+msgstr "Participant name already taken"
+
+#: src/event/Event.tsx:70
+#: src/event/EventStatBar.tsx:14
+msgid "Participants"
+msgstr "Participants"
+
+#: src/event/AddJidCode.tsx:57
+msgid "Save"
+msgstr "Save"
+
+#: src/components/Footer.tsx:37
+msgid "Server version: {serverVersion}"
+msgstr "Server version: {serverVersion}"
+
+#: src/components/ThemeSelector.tsx:49
+msgid "Theme"
+msgstr "Theme"
+
+#: src/event/JoinEvent.tsx:95
+msgid "What is your name?"
+msgstr "What is your name?"

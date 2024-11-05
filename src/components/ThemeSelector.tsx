@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Trans} from "@lingui/macro";
 
 const themes = [
     "light",
@@ -45,7 +46,7 @@ export const ThemeSelector = () => {
 
     return (
         <div className="dropdown dropdown-top">
-            <div tabIndex={0} role="button">Theme</div>
+            <div tabIndex={0} role="button"><Trans>Theme</Trans></div>
             <ul tabIndex={0}
                 className="dropdown-content menu bg-neutral rounded-box z-[1] h-[28.6rem] max-h-[calc(100vh-10rem)] w-80 overflow-y-auto p-2 shadow">
                 {themes.map((theme, index) => (

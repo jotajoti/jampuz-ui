@@ -5,7 +5,7 @@ export type WidgetContentFunction = (maximized: boolean) => ReactNode;
 
 export type Widget = {
     key: string
-    title: string
+    title: ReactNode
     content: ReactNode | WidgetContentFunction
     span?: 1 | 2 | 3 | 4
 }
