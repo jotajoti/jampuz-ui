@@ -1,0 +1,43 @@
+name: "Create tag and bump version"
+
+on:
+  workflow_dispatch:
+    inputs:
+      releaseType:
+        description: 'What type of release this is (major, minor, or patch)'
+        type: string
+        default: patch
+        options:
+          - major
+          - minor
+          - patch
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate a token
+        id: generate_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.generate_token.outputs.token }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+
+      - name: Configure Git user
+        run: |
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git config user.name "$GITHUB_ACTOR"
+
+      - name: Increase version
+        run: npm version ${{ input.releaseType }}
+
+      - name: Push to git
+        run: git push
