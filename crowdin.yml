@@ -1,3 +1,0 @@
-files:
-  - source: src/i18n/locales/*.po
-    translation: /src/i18n/locales/%two_letters_code%.ts
