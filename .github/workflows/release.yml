@@ -40,4 +40,6 @@ jobs:
         run: npm version ${{ inputs.releaseType }}
 
       - name: Push to git
-        run: git push --all
+        run: |
+          git push
+          git push --tags
