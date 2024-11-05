@@ -17,6 +17,7 @@ const documents = {
     "query FooterQuery {\n  serverVersion\n}": types.FooterQueryDocument,
     "mutation AuthenticateParticipant($eventId: ID!, $name: String!, $pinCode: String!) {\n  authenticateParticipant(eventId: $eventId, name: $name, pinCode: $pinCode)\n}": types.AuthenticateParticipantDocument,
     "mutation CreateParticipant($input: CreateParticipantInput!) {\n  createParticipant(input: $input) {\n    id\n    name\n    pinCode\n  }\n}": types.CreateParticipantDocument,
+    "subscription EventSubscription($eventId: ID!) {\n  eventUpdated(eventId: $eventId)\n}": types.EventSubscriptionDocument,
     "query GetEvent($code: String!) {\n  authenticatedParticipant {\n    id\n    name\n    event {\n      id\n    }\n  }\n  event(code: $code) {\n    id\n    location {\n      name\n    }\n    code {\n      value\n    }\n    year\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountryCount\n      countryStats {\n        country\n        uniqueCount\n      }\n    }\n    participants {\n      id\n      name\n      jidCodeStats {\n        uniqueCount\n        uniqueCountryCount\n      }\n    }\n  }\n}": types.GetEventDocument,
     "mutation RegisterJidCode($input: RegisterFoundJidCode!) {\n  registerFoundJidCode(input: $input) {\n    id\n  }\n}": types.RegisterJidCodeDocument,
 };
@@ -47,6 +48,10 @@ export function graphql(source: "mutation AuthenticateParticipant($eventId: ID!,
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function graphql(source: "mutation CreateParticipant($input: CreateParticipantInput!) {\n  createParticipant(input: $input) {\n    id\n    name\n    pinCode\n  }\n}"): (typeof documents)["mutation CreateParticipant($input: CreateParticipantInput!) {\n  createParticipant(input: $input) {\n    id\n    name\n    pinCode\n  }\n}"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "subscription EventSubscription($eventId: ID!) {\n  eventUpdated(eventId: $eventId)\n}"): (typeof documents)["subscription EventSubscription($eventId: ID!) {\n  eventUpdated(eventId: $eventId)\n}"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

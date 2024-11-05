@@ -1,0 +1,3 @@
+subscription EventSubscription($eventId: ID!) {
+    eventUpdated(eventId: $eventId)
+}
