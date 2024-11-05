@@ -5,7 +5,7 @@ on:
     inputs:
       releaseType:
         description: 'What type of release this is (major, minor, or patch)'
-        type: string
+        type: choice
         default: patch
         options:
           - major
@@ -37,7 +37,7 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
 
       - name: Increase version
-        run: npm version ${{ input.releaseType }}
+        run: npm version ${{ inputs.releaseType }}
 
       - name: Push to git
         run: git push
