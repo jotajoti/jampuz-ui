@@ -1,0 +1,39 @@
+name: "Synchronize translation strings with Translation.io"
+
+on: workflow_dispatch
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate a token
+        id: generate_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.generate_token.outputs.token }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+
+      - name: Configure Git user
+        run: |
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git config user.name "$GITHUB_ACTOR"
+
+      - name: Synchronize translations
+        env:
+          TRANSLATION_IO_API_KEY: ${{ secrets.TRANSLATION_IO_API_KEY }}
+        run: npm run messages:sync
+
+      # Should be tests once we have them
+      - name: Run build to ensure everything still works
+        run: npm run build
+
+      - name: Push to git
+        run: git push

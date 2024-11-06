@@ -23,7 +23,7 @@ export const ParticipantsTable = ({data}: ParticipantsTableProps) => {
             extraClassNames: "w-11/12"
         }, {
             key: "jidCodes",
-            header: <Trans>JID codes</Trans>,
+            header: <Trans>JID Codes</Trans>,
             getValue: participant => participant.jidCodeStats.uniqueCount,
             sort: numberSort(participant => participant.jidCodeStats.uniqueCount),
             sortAscendingDefault: false,
