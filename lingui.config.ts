@@ -9,6 +9,10 @@ const config: LinguiConfig = {
             include: ["src"],
         },
     ],
+    service: {
+        name: "TranslationIO",
+        apiKey: process.env.TRANSLATION_IO_API_KEY,
+    }
 };
 
 export default config;

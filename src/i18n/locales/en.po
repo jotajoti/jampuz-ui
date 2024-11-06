@@ -54,11 +54,8 @@ msgstr "Countries"
 msgid "Country"
 msgstr "Country"
 
-#: src/event/ParticipantsTable.tsx:26
-msgid "JID codes"
-msgstr "JID codes"
-
 #: src/event/EventStatBar.tsx:17
+#: src/event/ParticipantsTable.tsx:26
 msgid "JID Codes"
 msgstr "JID Codes"
 

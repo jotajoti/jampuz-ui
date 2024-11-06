@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2024-11-05 21:45+0100\n"
+"POT-Creation-Date: 2024-11-05 22:42+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,92 +16,89 @@ msgstr ""
 #. Event title
 #: src/event/Event.tsx:49
 msgid "{locationName} {eventYear}"
-msgstr ""
+msgstr "{locationName} {eventYear}"
 
 #: src/components/JidCodeInput.tsx:58
 msgid "Add Code"
-msgstr ""
+msgstr "Tilføj kode"
 
 #: src/event/AddJidCode.tsx:65
 #: src/event/AddJidCode.tsx:84
 msgid "Add JID Code"
-msgstr ""
+msgstr "Tilføj JID kode"
 
 #: src/event/AddJidCode.tsx:55
 #: src/event/JoinEvent.tsx:76
 msgid "Cancel"
-msgstr ""
+msgstr "Annuller"
 
 #: src/components/Footer.tsx:36
 msgid "Client version: {uiVersion}"
-msgstr ""
+msgstr "Klientversion: {uiVersion}"
 
 #: src/event/JoinEvent.tsx:65
 msgid "Couldn't authenticate {errorMessage}"
-msgstr ""
+msgstr "Kunne ikke logge på {errorMessage}"
 
 #: src/event/CountriesTable.tsx:25
 msgid "Count"
-msgstr ""
+msgstr "Antal"
 
 #: src/event/Event.tsx:75
 #: src/event/EventStatBar.tsx:20
 #: src/event/ParticipantsTable.tsx:33
 msgid "Countries"
-msgstr ""
+msgstr "Lande"
 
 #: src/event/CountriesTable.tsx:18
 msgid "Country"
-msgstr ""
-
-#: src/event/ParticipantsTable.tsx:26
-msgid "JID codes"
-msgstr ""
+msgstr "Land"
 
 #: src/event/EventStatBar.tsx:17
+#: src/event/ParticipantsTable.tsx:26
 msgid "JID Codes"
-msgstr ""
+msgstr "JID koder"
 
 #: src/event/JoinEvent.tsx:78
 #: src/event/JoinEvent.tsx:122
 msgid "Join"
-msgstr ""
+msgstr "Deltag"
 
 #. Join modal title
 #: src/event/JoinEvent.tsx:88
 msgid "Join ${locationName} ${eventYear}"
-msgstr ""
+msgstr "Deltag i ${locationName} ${eventYear}"
 
 #: src/event/Event.tsx:59
 msgid "Map"
-msgstr ""
+msgstr "Kort"
 
 #: src/event/JoinEvent.tsx:98
 #: src/event/ParticipantsTable.tsx:19
 msgid "Name"
-msgstr ""
+msgstr "Navn"
 
 #: src/gql/serverErrors.ts:37
 msgid "Participant name already taken"
-msgstr ""
+msgstr "Deltagerens navn er allerede taget"
 
 #: src/event/Event.tsx:70
 #: src/event/EventStatBar.tsx:14
 msgid "Participants"
-msgstr ""
+msgstr "Deltagere"
 
 #: src/event/AddJidCode.tsx:57
 msgid "Save"
-msgstr ""
+msgstr "Gem"
 
 #: src/components/Footer.tsx:37
 msgid "Server version: {serverVersion}"
-msgstr ""
+msgstr "Serverversion: {serverVersion}"
 
 #: src/components/ThemeSelector.tsx:49
 msgid "Theme"
-msgstr ""
+msgstr "Tema"
 
 #: src/event/JoinEvent.tsx:95
 msgid "What is your name?"
-msgstr ""
+msgstr "Hvad er dit navn?"

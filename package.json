@@ -9,8 +9,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "messages:extract": "lingui extract",
-    "messages:compile": "lingui compile --typescript",
+    "messages:sync": "lingui extract --overwrite --clean && lingui compile --typescript",
     "preview": "vite preview --host"
   },
   "dependencies": {
