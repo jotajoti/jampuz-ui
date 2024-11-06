@@ -3,7 +3,7 @@ name: "Synchronize translation strings with Translation.io"
 on: workflow_dispatch
 
 jobs:
-  release:
+  synchronize:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,10 +21,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
 
-      - name: Configure Git user
-        run: |
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git config user.name "$GITHUB_ACTOR"
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
 
       - name: Synchronize translations
         env:
@@ -34,6 +32,11 @@ jobs:
       # Should be tests once we have them
       - name: Run build to ensure everything still works
         run: npm run build
+
+      - name: Configure Git user
+        run: |
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git config user.name "$GITHUB_ACTOR"
 
       - name: Push to git
         run: git push
