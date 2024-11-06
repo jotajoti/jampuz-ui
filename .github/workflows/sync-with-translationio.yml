@@ -38,5 +38,7 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git config user.name "$GITHUB_ACTOR"
 
-      - name: Push to git
-        run: git push
+      - name: Commit and push
+        run: |
+          git commit -a -m "Synchronized translation with Translation.io"
+          git push
