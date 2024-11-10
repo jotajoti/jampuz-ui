@@ -1,19 +1,22 @@
 import {Trans} from "@lingui/macro";
 
-import {numberSort, stringSort, Table, TableDef} from "../components/table";
-import {ArrayElement} from "../utils.ts";
-import {GetEventQuery} from "../gql";
+import {numberSort, stringSort, Table, TableDef} from "../../components/table";
+import {ArrayElement} from "../../utils";
+import {FragmentType, ParticipantsFragmentDoc, useFragment} from "../../gql";
 
 type ParticipantsTableProps = {
-    data: GetEventQuery
+    authenticatedParticipantId?: string
+    participantsFragmentDoc: FragmentType<typeof ParticipantsFragmentDoc>
 }
 
-export const ParticipantsTable = ({data}: ParticipantsTableProps) => {
-    const participants = data!.event!.participants;
+export const ParticipantsTable = ({participantsFragmentDoc, authenticatedParticipantId}: ParticipantsTableProps) => {
+    const participantsFragment = useFragment(ParticipantsFragmentDoc, participantsFragmentDoc)
+
+    const participants = participantsFragment.participants!;
     const participantTable: TableDef<ArrayElement<typeof participants>> = {
         data: participants,
         defaultSortColumn: "jidCodes",
-        rowClassNames: participant => participant.id === data.authenticatedParticipant?.id ? 'bg-accent text-accent-content' : '',
+        rowClassNames: participant => participant.id === authenticatedParticipantId ? 'bg-accent text-accent-content' : '',
         columns: [{
             key: "name",
             header: <Trans>Name</Trans>,

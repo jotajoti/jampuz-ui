@@ -1,0 +1,8 @@
+query GetAdminLocation($locationId: ID!) {
+    location(locationId: $locationId) {
+        id
+        name
+        ...GetAdminLocationEvents
+        ...GetAdminLocationOwners
+    }
+}

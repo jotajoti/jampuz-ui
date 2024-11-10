@@ -1,0 +1,18 @@
+fragment GetAdminLocationEvents on Location {
+    events {
+        id
+        code {
+            value
+        }
+        year
+        active
+        jidCodeStats {
+            count
+            uniqueCount
+            uniqueCountryCount
+        }
+        participants {
+            id
+        }
+    }
+}

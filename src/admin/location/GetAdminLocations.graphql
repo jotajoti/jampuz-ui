@@ -1,0 +1,13 @@
+fragment GetAdminLocations on Query {
+    locations {
+        id
+        name
+        latestEvent {
+            id
+            year
+        }
+        events {
+            id
+        }
+    }
+}

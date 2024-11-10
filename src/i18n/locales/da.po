@@ -1,11 +1,21 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2024-11-06 14:46+0000\n"
+"POT-Creation-Date: 2024-11-10 15:52+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: da\n"
+
+#: src/admin/location/AdminLocationEventTable.tsx:59
+msgid "# JID codes"
+msgstr "# JID koder"
+
+#: src/admin/location/AdminLocationEventTable.tsx:36
+#: src/admin/location/AdminLocationEventTable.tsx:40
+#: src/admin/location/AdminLocationEventTable.tsx:41
+msgid "Active"
+msgstr "Aktiv"
 
 #: src/components/JidCodeInput.tsx:58
 msgid "Add Code"
@@ -16,83 +26,1163 @@ msgstr "Tilføj kode"
 msgid "Add JID Code"
 msgstr "Tilføj JID kode"
 
+#: src/event/AuthenticatedButtons.tsx:21
+#: src/landing/Landing.tsx:15
+msgid "Admin"
+msgstr "Admin"
+
+#: src/utils/countries.tsx:11
+msgid "Afghanistan"
+msgstr "Afghanistan"
+
+#: src/utils/countries.tsx:17
+msgid "Albania"
+msgstr "Albanien"
+
+#: src/utils/countries.tsx:129
+msgid "Algeria"
+msgstr "Algeriet"
+
+#: src/utils/countries.tsx:25
+msgid "American Samoa"
+msgstr "Amerikansk Samoa"
+
+#: src/utils/countries.tsx:7
+msgid "Andorra"
+msgstr "Andorra"
+
+#: src/utils/countries.tsx:21
+msgid "Angola"
+msgstr "Angola"
+
+#: src/utils/countries.tsx:15
+msgid "Anguilla"
+msgstr "Anguilla"
+
+#: src/utils/countries.tsx:13
+msgid "Antigua & Barbuda"
+msgstr "Antigua og Barbuda"
+
+#: src/utils/countries.tsx:23
+msgid "Argentina"
+msgstr "Argentina"
+
+#: src/utils/countries.tsx:19
+msgid "Armenia"
+msgstr "Armenien"
+
+#: src/utils/countries.tsx:31
+msgid "Aruba"
+msgstr "Aruba"
+
+#: src/utils/countries.tsx:29
+msgid "Australia"
+msgstr "Australien"
+
+#: src/utils/countries.tsx:27
+msgid "Austria"
+msgstr "Østrig"
+
+#: src/gql/serverErrors.ts:40
+msgid "Authentication failed"
+msgstr "Login mislykkedes"
+
+#: src/components/LanguageSelector.tsx:32
+msgid "Auto"
+msgstr "Auto"
+
+#: src/utils/countries.tsx:35
+msgid "Azerbaijan"
+msgstr "Aserbajdsjan"
+
+#: src/utils/countries.tsx:67
+msgid "Bahamas"
+msgstr "Bahamas"
+
+#: src/utils/countries.tsx:49
+msgid "Bahrain"
+msgstr "Bahrain"
+
+#: src/utils/countries.tsx:41
+msgid "Bangladesh"
+msgstr "Bangladesh"
+
+#: src/utils/countries.tsx:39
+msgid "Barbados"
+msgstr "Barbados"
+
+#: src/utils/countries.tsx:73
+msgid "Belarus"
+msgstr "Hviderusland"
+
+#: src/utils/countries.tsx:43
+msgid "Belgium"
+msgstr "Belgien"
+
+#: src/utils/countries.tsx:75
+msgid "Belize"
+msgstr "Belize"
+
+#: src/utils/countries.tsx:53
+msgid "Benin"
+msgstr "Benin"
+
+#: src/utils/countries.tsx:57
+msgid "Bermuda"
+msgstr "Bermuda"
+
+#: src/utils/countries.tsx:69
+msgid "Bhutan"
+msgstr "Bhutan"
+
+#: src/utils/countries.tsx:61
+msgid "Bolivia"
+msgstr "Bolivia"
+
+#: src/utils/countries.tsx:37
+msgid "Bosnia & Herzegovina"
+msgstr "Bosnien-Hercegovina"
+
+#: src/utils/countries.tsx:71
+msgid "Botswana"
+msgstr "Botswana"
+
+#: src/utils/countries.tsx:65
+msgid "Brazil"
+msgstr "Brasilien"
+
+#: src/utils/countries.tsx:217
+msgid "British Indian Ocean Territory"
+msgstr "Britisk territorium i Det Indiske Ocean"
+
+#: src/utils/countries.tsx:481
+msgid "British Virgin Islands"
+msgstr "De Britiske Jomfruøer"
+
+#: src/utils/countries.tsx:59
+msgid "Brunei"
+msgstr "Brunei"
+
+#: src/utils/countries.tsx:47
+msgid "Bulgaria"
+msgstr "Bulgarien"
+
+#: src/utils/countries.tsx:45
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: src/utils/countries.tsx:51
+msgid "Burundi"
+msgstr "Burundi"
+
+#: src/utils/countries.tsx:239
+msgid "Cambodia"
+msgstr "Cambodja"
+
+#: src/utils/countries.tsx:95
+msgid "Cameroon"
+msgstr "Cameroun"
+
+#: src/utils/countries.tsx:77
+msgid "Canada"
+msgstr "Canada"
+
+#: src/utils/countries.tsx:205
+msgid "Canary Islands"
+msgstr "De Kanariske Øer"
+
 #: src/event/AddJidCode.tsx:55
-#: src/event/JoinEvent.tsx:76
+#: src/event/join/JoinEvent.tsx:55
 msgid "Cancel"
 msgstr "Annuller"
 
-#: src/components/Footer.tsx:36
+#: src/utils/countries.tsx:107
+msgid "Cape Verde"
+msgstr "Kap Verde"
+
+#: src/utils/countries.tsx:63
+msgid "Caribbean Netherlands"
+msgstr "Caribien Holland"
+
+#: src/utils/countries.tsx:253
+msgid "Cayman Islands"
+msgstr "Caymanøerne"
+
+#: src/utils/countries.tsx:83
+msgid "Central African Republic"
+msgstr "Den Centralafrikanske Republik"
+
+#: src/utils/countries.tsx:131
+msgid "Ceuta & Melilla"
+msgstr "Ceuta og Melilla"
+
+#: src/utils/countries.tsx:435
+msgid "Chad"
+msgstr "Chad"
+
+#: src/utils/countries.tsx:93
+msgid "Chile"
+msgstr "Chile"
+
+#: src/utils/countries.tsx:97
+msgid "China"
+msgstr "Kina"
+
+#: src/utils/countries.tsx:111
+msgid "Christmas Island"
+msgstr "Juleøen"
+
+#: src/components/Footer.tsx:39
 msgid "Client version: {uiVersion}"
 msgstr "Klientversion: {uiVersion}"
 
-#: src/event/JoinEvent.tsx:65
-msgid "Couldn't authenticate {errorMessage}"
-msgstr "Kunne ikke logge på {errorMessage}"
+#: src/utils/countries.tsx:79
+msgid "Cocos (Keeling) Islands"
+msgstr "Cocos (Keeling) øerne"
 
-#: src/event/CountriesTable.tsx:25
+#: src/utils/countries.tsx:99
+msgid "Colombia"
+msgstr "Colombia"
+
+#: src/utils/countries.tsx:243
+msgid "Comoros"
+msgstr "Comorerne"
+
+#: src/utils/countries.tsx:85
+msgid "Congo - Brazzaville"
+msgstr "Congo - Brazzaville"
+
+#: src/utils/countries.tsx:81
+msgid "Congo - Kinshasa"
+msgstr "Congo - Kinshasa"
+
+#: src/utils/countries.tsx:91
+msgid "Cook Islands"
+msgstr "Cook-øerne"
+
+#: src/utils/countries.tsx:101
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: src/event/CountriesTable.tsx:27
 msgid "Count"
 msgstr "Antal"
 
-#: src/event/Event.tsx:75
-#: src/event/EventStatBar.tsx:20
-#: src/event/ParticipantsTable.tsx:33
+#: src/event/Event.tsx:69
+#: src/event/ParticipantsTable.tsx:36
+#: src/event/statbar/EventStatBar.tsx:22
 msgid "Countries"
 msgstr "Lande"
 
-#: src/event/CountriesTable.tsx:18
+#: src/event/CountriesTable.tsx:20
 msgid "Country"
 msgstr "Land"
 
-#: src/event/EventStatBar.tsx:17
-#: src/event/ParticipantsTable.tsx:26
+#: src/utils/countries.tsx:199
+msgid "Croatia"
+msgstr "Kroatien"
+
+#: src/utils/countries.tsx:105
+msgid "Cuba"
+msgstr "Cuba"
+
+#: src/utils/countries.tsx:109
+msgid "Curaçao"
+msgstr "Curaçao"
+
+#: src/utils/countries.tsx:113
+msgid "Cyprus"
+msgstr "Cypern"
+
+#: src/utils/countries.tsx:115
+msgid "Czechia"
+msgstr "Tjekkiet"
+
+#: src/utils/countries.tsx:89
+msgid "Côte d’Ivoire"
+msgstr "Elfenbenskysten"
+
+#: src/utils/languages.tsx:6
+msgid "Danish"
+msgstr "Dansk"
+
+#: src/utils/countries.tsx:123
+msgid "Denmark"
+msgstr "Danmark"
+
+#: src/utils/countries.tsx:119
+msgid "Diego Garcia"
+msgstr "Diego Garcia"
+
+#: src/utils/countries.tsx:121
+msgid "Djibouti"
+msgstr "Djibouti"
+
+#: src/utils/countries.tsx:125
+msgid "Dominica"
+msgstr "Dominica"
+
+#: src/utils/countries.tsx:127
+msgid "Dominican Republic"
+msgstr "Den Dominikanske Republik"
+
+#: src/utils/countries.tsx:133
+msgid "Ecuador"
+msgstr "Ecuador"
+
+#: src/utils/countries.tsx:137
+msgid "Egypt"
+msgstr "Egypten"
+
+#: src/utils/countries.tsx:425
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: src/admin/login/AdminLogin.tsx:29
+msgid "Email"
+msgstr "E-mail"
+
+#: src/utils/languages.tsx:8
+msgid "English"
+msgstr "Engelsk"
+
+#: src/utils/countries.tsx:183
+msgid "Equatorial Guinea"
+msgstr "Ækvatorialguinea"
+
+#: src/utils/countries.tsx:141
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#: src/utils/countries.tsx:135
+msgid "Estonia"
+msgstr "Estland"
+
+#: src/utils/countries.tsx:431
+msgid "Eswatini"
+msgstr "Eswatini"
+
+#: src/utils/countries.tsx:145
+msgid "Ethiopia"
+msgstr "Etiopien"
+
+#: src/admin/location/AdminLocationTable.tsx:29
+msgid "Event #"
+msgstr "Arrangement #"
+
+#: src/admin/location/AdminLocation.tsx:24
+msgid "Events"
+msgstr "Arrangementer"
+
+#: src/utils/countries.tsx:151
+msgid "Falkland Islands"
+msgstr "Falklandsøerne"
+
+#: src/utils/countries.tsx:155
+msgid "Faroe Islands"
+msgstr "Færøerne"
+
+#: src/utils/countries.tsx:149
+msgid "Fiji"
+msgstr "Fiji"
+
+#: src/utils/countries.tsx:147
+msgid "Finland"
+msgstr "Finland"
+
+#: src/utils/countries.tsx:157
+msgid "France"
+msgstr "Frankrig"
+
+#: src/utils/countries.tsx:167
+msgid "French Guiana"
+msgstr "Fransk Guyana"
+
+#: src/utils/countries.tsx:355
+msgid "French Polynesia"
+msgstr "Fransk Polynesien"
+
+#: src/utils/countries.tsx:159
+msgid "Gabon"
+msgstr "Gabon"
+
+#: src/utils/countries.tsx:177
+msgid "Gambia"
+msgstr "Gambia"
+
+#: src/utils/countries.tsx:165
+msgid "Georgia"
+msgstr "Georgien"
+
+#: src/utils/countries.tsx:117
+msgid "Germany"
+msgstr "Tyskland"
+
+#: src/utils/countries.tsx:171
+msgid "Ghana"
+msgstr "Ghana"
+
+#: src/utils/countries.tsx:173
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#: src/admin/event/AdminEvent.tsx:23
+msgid "Go to event"
+msgstr "Gå til begivenhed"
+
+#: src/utils/countries.tsx:185
+msgid "Greece"
+msgstr "Grækenland"
+
+#: src/utils/countries.tsx:175
+msgid "Greenland"
+msgstr "Grønland"
+
+#: src/utils/countries.tsx:163
+msgid "Grenada"
+msgstr "Grenada"
+
+#: src/utils/countries.tsx:181
+msgid "Guadeloupe"
+msgstr "Guadeloupe"
+
+#: src/utils/countries.tsx:189
+msgid "Guam"
+msgstr "Guam"
+
+#: src/utils/countries.tsx:187
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: src/utils/countries.tsx:169
+msgid "Guernsey"
+msgstr "Guernsey"
+
+#: src/utils/countries.tsx:179
+msgid "Guinea"
+msgstr "Guinea"
+
+#: src/utils/countries.tsx:191
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bissau"
+
+#: src/utils/countries.tsx:193
+msgid "Guyana"
+msgstr "Guyana"
+
+#: src/utils/countries.tsx:201
+msgid "Haiti"
+msgstr "Haiti"
+
+#: src/utils/countries.tsx:197
+msgid "Honduras"
+msgstr "Honduras"
+
+#: src/utils/countries.tsx:195
+msgid "Hong Kong SAR China"
+msgstr "SAR Hongkong"
+
+#: src/utils/countries.tsx:203
+msgid "Hungary"
+msgstr "Ungarn"
+
+#: src/utils/countries.tsx:223
+msgid "Iceland"
+msgstr "Island"
+
+#: src/utils/countries.tsx:215
+msgid "India"
+msgstr "Indien"
+
+#: src/utils/countries.tsx:207
+msgid "Indonesia"
+msgstr "Indonesien"
+
+#: src/utils/countries.tsx:221
+msgid "Iran"
+msgstr "Iran"
+
+#: src/utils/countries.tsx:219
+msgid "Iraq"
+msgstr "Irak"
+
+#: src/utils/countries.tsx:209
+msgid "Ireland"
+msgstr "Irland"
+
+#: src/utils/countries.tsx:213
+msgid "Isle of Man"
+msgstr "Isle of Man"
+
+#: src/utils/countries.tsx:211
+msgid "Israel"
+msgstr "Israel"
+
+#: src/utils/countries.tsx:225
+msgid "Italy"
+msgstr "Italien"
+
+#: src/event/ParticipantsTable.tsx:29
+#: src/event/statbar/EventStatBar.tsx:19
 msgid "JID Codes"
 msgstr "JID koder"
 
-#: src/event/JoinEvent.tsx:78
-#: src/event/JoinEvent.tsx:122
+#: src/admin/location/AdminLocationEventTable.tsx:30
+msgid "JID code"
+msgstr "JID kode"
+
+#: src/utils/countries.tsx:229
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#: src/utils/countries.tsx:233
+msgid "Japan"
+msgstr "Japan"
+
+#: src/utils/countries.tsx:227
+msgid "Jersey"
+msgstr "Jersey"
+
+#: src/event/Event.tsx:32
+#: src/event/join/JoinEvent.tsx:56
 msgid "Join"
 msgstr "Deltag"
 
 #. Join modal title
-#: src/event/JoinEvent.tsx:88
-msgid "Join ${locationName} ${eventYear}"
-msgstr "Deltag i ${locationName} ${eventYear}"
+#: src/event/join/JoinEvent.tsx:36
+msgid "Join {locationName} {eventYear}"
+msgstr "Deltag i {locationName} {eventYear}"
 
-#: src/event/Event.tsx:59
+#: src/utils/countries.tsx:231
+msgid "Jordan"
+msgstr "Jordan"
+
+#: src/utils/countries.tsx:255
+msgid "Kazakhstan"
+msgstr "Kasakhstan"
+
+#: src/utils/countries.tsx:235
+msgid "Kenya"
+msgstr "Kenya"
+
+#: src/utils/countries.tsx:241
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: src/utils/countries.tsx:493
+msgid "Kosovo"
+msgstr "Kosovo"
+
+#: src/utils/countries.tsx:251
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#: src/utils/countries.tsx:237
+msgid "Kyrgyzstan"
+msgstr "Kirgisistan"
+
+#: src/components/LanguageSelector.tsx:22
+msgid "Language"
+msgstr "Sprog"
+
+#: src/utils/countries.tsx:257
+msgid "Laos"
+msgstr "Laos"
+
+#: src/admin/location/AdminLocationTable.tsx:35
+msgid "Latest Event"
+msgstr "Seneste arrangement"
+
+#: src/utils/countries.tsx:275
+msgid "Latvia"
+msgstr "Letland"
+
+#: src/utils/countries.tsx:259
+msgid "Lebanon"
+msgstr "Libanon"
+
+#: src/utils/countries.tsx:269
+msgid "Lesotho"
+msgstr "Lesotho"
+
+#: src/utils/countries.tsx:267
+msgid "Liberia"
+msgstr "Liberia"
+
+#: src/utils/countries.tsx:277
+msgid "Libya"
+msgstr "Libyen"
+
+#: src/utils/countries.tsx:263
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: src/utils/countries.tsx:271
+msgid "Lithuania"
+msgstr "Litauen"
+
+#: src/admin/overview/AdminOverview.tsx:24
+msgid "Locations"
+msgstr "Steder"
+
+#: src/admin/login/AdminLogin.tsx:40
+msgid "Login"
+msgstr "Log ind"
+
+#: src/admin/Admin.tsx:46
+#: src/event/AuthenticatedButtons.tsx:28
+msgid "Logout"
+msgstr "Log ud"
+
+#: src/utils/countries.tsx:273
+msgid "Luxembourg"
+msgstr "Luxembourg"
+
+#: src/utils/countries.tsx:301
+msgid "Macao SAR China"
+msgstr "SAR Macao"
+
+#: src/utils/countries.tsx:289
+msgid "Madagascar"
+msgstr "Madagaskar"
+
+#: src/utils/countries.tsx:317
+msgid "Malawi"
+msgstr "Malawi"
+
+#: src/utils/countries.tsx:321
+msgid "Malaysia"
+msgstr "Malaysia"
+
+#: src/utils/countries.tsx:315
+msgid "Maldives"
+msgstr "Maldiverne"
+
+#: src/utils/countries.tsx:295
+msgid "Mali"
+msgstr "Mali"
+
+#: src/utils/countries.tsx:311
+msgid "Malta"
+msgstr "Malta"
+
+#: src/event/Event.tsx:57
 msgid "Map"
 msgstr "Kort"
 
-#: src/event/JoinEvent.tsx:98
-#: src/event/ParticipantsTable.tsx:19
+#: src/utils/countries.tsx:291
+msgid "Marshall Islands"
+msgstr "Marshalløerne"
+
+#: src/utils/countries.tsx:305
+msgid "Martinique"
+msgstr "Martinique"
+
+#: src/utils/countries.tsx:307
+msgid "Mauritania"
+msgstr "Mauretanien"
+
+#: src/utils/countries.tsx:313
+msgid "Mauritius"
+msgstr "Mauritius"
+
+#: src/utils/countries.tsx:497
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#: src/utils/countries.tsx:319
+msgid "Mexico"
+msgstr "Mexico"
+
+#: src/utils/countries.tsx:153
+msgid "Micronesia"
+msgstr "Mikronesien"
+
+#: src/utils/countries.tsx:283
+msgid "Moldova"
+msgstr "Moldova"
+
+#: src/utils/countries.tsx:281
+msgid "Monaco"
+msgstr "Monaco"
+
+#: src/utils/countries.tsx:299
+msgid "Mongolia"
+msgstr "Mongoliet"
+
+#: src/utils/countries.tsx:285
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#: src/utils/countries.tsx:309
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: src/utils/countries.tsx:279
+msgid "Morocco"
+msgstr "Marokko"
+
+#: src/utils/countries.tsx:323
+msgid "Mozambique"
+msgstr "Mozambique"
+
+#: src/utils/countries.tsx:297
+msgid "Myanmar (Burma)"
+msgstr "Myanmar (Burma)"
+
+#: src/admin/location/AdminLocationOwnerTable.tsx:20
+#: src/admin/location/AdminLocationTable.tsx:21
+#: src/event/join/JoinEvent.tsx:44
+#: src/event/ParticipantsTable.tsx:22
 msgid "Name"
 msgstr "Navn"
 
-#: src/gql/serverErrors.ts:37
+#: src/utils/countries.tsx:325
+msgid "Namibia"
+msgstr "Namibia"
+
+#: src/utils/countries.tsx:343
+msgid "Nauru"
+msgstr "Nauru"
+
+#: src/utils/countries.tsx:341
+msgid "Nepal"
+msgstr "Nepal"
+
+#: src/utils/countries.tsx:337
+msgid "Netherlands"
+msgstr "Holland"
+
+#: src/utils/countries.tsx:327
+msgid "New Caledonia"
+msgstr "Ny Kaledonien"
+
+#: src/utils/countries.tsx:347
+msgid "New Zealand"
+msgstr "New Zealand"
+
+#: src/utils/countries.tsx:335
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#: src/utils/countries.tsx:329
+msgid "Niger"
+msgstr "Niger"
+
+#: src/utils/countries.tsx:333
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: src/utils/countries.tsx:345
+msgid "Niue"
+msgstr "Niue"
+
+#: src/utils/countries.tsx:331
+msgid "Norfolk Island"
+msgstr "Norfolk-øen"
+
+#: src/utils/countries.tsx:247
+msgid "North Korea"
+msgstr "Nordkorea"
+
+#: src/utils/countries.tsx:293
+msgid "North Macedonia"
+msgstr "Nordmakedonien"
+
+#: src/utils/countries.tsx:303
+msgid "Northern Mariana Islands"
+msgstr "Nordmarianerne"
+
+#: src/utils/countries.tsx:339
+msgid "Norway"
+msgstr "Norge"
+
+#: src/admin/location/AdminLocationEventTable.tsx:44
+#: src/admin/location/AdminLocationEventTable.tsx:45
+msgid "Not active"
+msgstr "Ikke aktiv"
+
+#: src/utils/countries.tsx:349
+msgid "Oman"
+msgstr "Oman"
+
+#: src/admin/location/AdminLocation.tsx:29
+msgid "Owners"
+msgstr "Ejere"
+
+#: src/utils/countries.tsx:361
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: src/utils/countries.tsx:375
+msgid "Palau"
+msgstr "Palau"
+
+#: src/utils/countries.tsx:371
+msgid "Palestinian Territories"
+msgstr "Palæstinensiske områder"
+
+#: src/utils/countries.tsx:351
+msgid "Panama"
+msgstr "Panama"
+
+#: src/utils/countries.tsx:357
+msgid "Papua New Guinea"
+msgstr "Papua Ny Guinea"
+
+#: src/utils/countries.tsx:377
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#: src/gql/serverErrors.ts:38
 msgid "Participant name already taken"
 msgstr "Deltagerens navn er allerede taget"
 
-#: src/event/Event.tsx:70
-#: src/event/EventStatBar.tsx:14
+#: src/admin/location/AdminLocationEventTable.tsx:53
+#: src/event/Event.tsx:61
+#: src/event/statbar/EventStatBar.tsx:16
 msgid "Participants"
 msgstr "Deltagere"
+
+#: src/admin/login/AdminLogin.tsx:38
+msgid "Password"
+msgstr "Kodeord"
+
+#: src/utils/countries.tsx:353
+msgid "Peru"
+msgstr "Peru"
+
+#: src/utils/countries.tsx:359
+msgid "Philippines"
+msgstr "Filippinerne"
+
+#: src/utils/countries.tsx:367
+msgid "Pitcairn Islands"
+msgstr "Pitcairn-øerne"
+
+#: src/utils/countries.tsx:363
+msgid "Poland"
+msgstr "Polen"
+
+#: src/utils/countries.tsx:373
+msgid "Portugal"
+msgstr "Portugal"
+
+#: src/admin/Admin.tsx:40
+msgid "Profile"
+msgstr "Profil"
+
+#: src/utils/countries.tsx:369
+msgid "Puerto Rico"
+msgstr "Puerto Rico"
+
+#: src/utils/countries.tsx:379
+msgid "Qatar"
+msgstr "Qatar"
+
+#: src/utils/countries.tsx:383
+msgid "Romania"
+msgstr "Rumænien"
+
+#: src/utils/countries.tsx:387
+msgid "Russia"
+msgstr "Rusland"
+
+#: src/utils/countries.tsx:389
+msgid "Rwanda"
+msgstr "Rwanda"
+
+#: src/utils/countries.tsx:381
+msgid "Réunion"
+msgstr "Réunion"
+
+#: src/utils/countries.tsx:491
+msgid "Samoa"
+msgstr "Samoa"
+
+#: src/utils/countries.tsx:413
+msgid "San Marino"
+msgstr "San Marino"
+
+#: src/utils/countries.tsx:391
+msgid "Saudi Arabia"
+msgstr "Saudi-Arabien"
 
 #: src/event/AddJidCode.tsx:57
 msgid "Save"
 msgstr "Gem"
 
-#: src/components/Footer.tsx:37
+#: src/utils/countries.tsx:415
+msgid "Senegal"
+msgstr "Senegal"
+
+#: src/utils/countries.tsx:385
+msgid "Serbia"
+msgstr "Serbien"
+
+#: src/utils/countries.tsx:103
+msgid "Serbia and Montenegro"
+msgstr "Serbien og Montenegro"
+
+#: src/components/Footer.tsx:40
 msgid "Server version: {serverVersion}"
 msgstr "Serverversion: {serverVersion}"
+
+#: src/utils/countries.tsx:395
+msgid "Seychelles"
+msgstr "Seychellerne"
+
+#: src/utils/countries.tsx:411
+msgid "Sierra Leone"
+msgstr "Sierra Leone"
+
+#: src/utils/countries.tsx:401
+msgid "Singapore"
+msgstr "Singapore"
+
+#: src/utils/countries.tsx:427
+msgid "Sint Maarten"
+msgstr "Sint Maarten"
+
+#: src/utils/countries.tsx:409
+msgid "Slovakia"
+msgstr "Slovakiet"
+
+#: src/utils/countries.tsx:405
+msgid "Slovenia"
+msgstr "Slovenien"
+
+#: src/utils/countries.tsx:393
+msgid "Solomon Islands"
+msgstr "Salomonøerne"
+
+#: src/utils/countries.tsx:417
+msgid "Somalia"
+msgstr "Somalia"
+
+#: src/utils/countries.tsx:499
+msgid "South Africa"
+msgstr "Sydafrika"
+
+#: src/utils/countries.tsx:249
+msgid "South Korea"
+msgstr "Sydkorea"
+
+#: src/utils/countries.tsx:421
+msgid "South Sudan"
+msgstr "Sydsudan"
+
+#: src/utils/countries.tsx:143
+msgid "Spain"
+msgstr "Spanien"
+
+#: src/utils/countries.tsx:265
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: src/utils/countries.tsx:55
+msgid "St Barthélemy"
+msgstr "St Barthélemy"
+
+#: src/utils/countries.tsx:403
+msgid "St Helena"
+msgstr "St Helena"
+
+#: src/utils/countries.tsx:245
+msgid "St Kitts & Nevis"
+msgstr "St Kitts & Nevis"
+
+#: src/utils/countries.tsx:261
+msgid "St Lucia"
+msgstr "Saint Lucia"
+
+#: src/utils/countries.tsx:287
+msgid "St Martin"
+msgstr "Saint Martin"
+
+#: src/utils/countries.tsx:365
+msgid "St Pierre & Miquelon"
+msgstr "St Pierre og Miquelon"
+
+#: src/utils/countries.tsx:477
+msgid "St Vincent & the Grenadines"
+msgstr "Vincent og Grenadinerne"
+
+#: src/utils/countries.tsx:397
+msgid "Sudan"
+msgstr "Sudan"
+
+#: src/utils/countries.tsx:419
+msgid "Suriname"
+msgstr "Surinam"
+
+#: src/utils/countries.tsx:407
+msgid "Svalbard & Jan Mayen"
+msgstr "Svalbard og Jan Mayen"
+
+#: src/utils/countries.tsx:399
+msgid "Sweden"
+msgstr "Sverige"
+
+#: src/utils/countries.tsx:87
+msgid "Switzerland"
+msgstr "Schweiz"
+
+#: src/utils/countries.tsx:429
+msgid "Syria"
+msgstr "Syrien"
+
+#: src/utils/countries.tsx:423
+msgid "São Tomé & Príncipe"
+msgstr "São Tomé og Príncipe"
+
+#: src/utils/countries.tsx:459
+msgid "Taiwan"
+msgstr "Taiwan"
+
+#: src/utils/countries.tsx:441
+msgid "Tajikistan"
+msgstr "Tadsjikistan"
+
+#: src/utils/countries.tsx:461
+msgid "Tanzania"
+msgstr "Tanzania"
+
+#: src/utils/countries.tsx:439
+msgid "Thailand"
+msgstr "Thailand"
 
 #: src/components/ThemeSelector.tsx:49
 msgid "Theme"
 msgstr "Tema"
 
-#: src/event/JoinEvent.tsx:95
+#: src/utils/countries.tsx:445
+msgid "Timor-Leste"
+msgstr "Timor-Leste"
+
+#: src/utils/countries.tsx:437
+msgid "Togo"
+msgstr "Togo"
+
+#: src/utils/countries.tsx:443
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#: src/utils/countries.tsx:451
+msgid "Tonga"
+msgstr "Tonga"
+
+#: src/utils/countries.tsx:455
+msgid "Trinidad & Tobago"
+msgstr "Trinidad & Tobago"
+
+#: src/utils/countries.tsx:449
+msgid "Tunisia"
+msgstr "Tunesien"
+
+#: src/utils/countries.tsx:447
+msgid "Turkmenistan"
+msgstr "Turkmenistan"
+
+#: src/utils/countries.tsx:433
+msgid "Turks & Caicos Islands"
+msgstr "Turks- og Caicosøerne"
+
+#: src/utils/countries.tsx:457
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: src/utils/countries.tsx:453
+msgid "Türkiye"
+msgstr "Tyrkiet"
+
+#: src/utils/countries.tsx:467
+msgid "US Outlying Islands"
+msgstr "Amerikanske oversøiske øer"
+
+#: src/utils/countries.tsx:483
+msgid "US Virgin Islands"
+msgstr "De Amerikanske Jomfruøer"
+
+#: src/utils/countries.tsx:465
+msgid "Uganda"
+msgstr "Uganda"
+
+#: src/utils/countries.tsx:463
+msgid "Ukraine"
+msgstr "Ukraine"
+
+#: src/utils/countries.tsx:9
+msgid "United Arab Emirates"
+msgstr "De Forenede Arabiske Emirater"
+
+#: src/utils/countries.tsx:161
+msgid "United Kingdom"
+msgstr "Storbritannien"
+
+#: src/utils/countries.tsx:469
+msgid "United States"
+msgstr "USA"
+
+#: src/utils/countries.tsx:471
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#: src/utils/countries.tsx:473
+msgid "Uzbekistan"
+msgstr "Usbekistan"
+
+#: src/utils/countries.tsx:487
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: src/utils/countries.tsx:475
+msgid "Vatican City"
+msgstr "Vatikanstaten"
+
+#: src/utils/countries.tsx:479
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: src/utils/countries.tsx:485
+msgid "Vietnam"
+msgstr "Vietnam"
+
+#: src/utils/countries.tsx:489
+msgid "Wallis & Futuna"
+msgstr "Wallis og Futuna"
+
+#: src/utils/countries.tsx:139
+msgid "Western Sahara"
+msgstr "Vestsahara"
+
+#: src/event/join/JoinEvent.tsx:41
 msgid "What is your name?"
 msgstr "Hvad er dit navn?"
 
+#: src/admin/location/AdminLocationEventTable.tsx:22
+msgid "Year"
+msgstr "År"
+
+#: src/utils/countries.tsx:495
+msgid "Yemen"
+msgstr "Yemen"
+
+#: src/utils/countries.tsx:501
+msgid "Zambia"
+msgstr "Zambia"
+
+#: src/utils/countries.tsx:503
+msgid "Zimbabwe"
+msgstr "Zimbabwe"
+
 #. Event title
-#: src/event/Event.tsx:49
+#. Event title
+#: src/admin/event/AdminEvent.tsx:18
+#: src/event/Event.tsx:42
 msgid "{locationName} {eventYear}"
 msgstr "{locationName} {eventYear}"
+
+#: src/utils/countries.tsx:33
+msgid "Åland Islands"
+msgstr "Ålandsøerne"

@@ -8,7 +8,8 @@ type NavigationBarProps = {
 
 export const NavigationBar = ({start, center, end}: NavigationBarProps) => {
     return (
-        <div className="navbar bg-neutral text-neutral-content glass">
+        // !backdrop-filter-none fixes a bug where the dropdown menu would be behind the content.
+        <div className="navbar bg-neutral text-neutral-content glass !backdrop-filter-none">
             <div className="navbar-start">
                 {start}
             </div>

@@ -81,7 +81,9 @@ export const Table = <T, >({tableDef}: TableProps<T>) => {
                         <tr key={rowIndex}>
                             {tableDef.columns.map((column, columnIndex) => (
                                 <td className={`${column.extraClassNames ? column.extraClassNames : ''} ${tableDef.rowClassNames ? tableDef.rowClassNames(row) : ''}`}
-                                    key={columnIndex}>{column.getValue(row)}</td>
+                                    key={columnIndex}>
+                                    {column.getValue(row)}
+                                </td>
                             ))}
                         </tr>
                     ))}

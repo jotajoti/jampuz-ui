@@ -2,6 +2,7 @@ import {ReactNode} from "react";
 
 import {NavigationBar} from "./components/NavigationBar.tsx";
 import {Footer} from "./components/Footer.tsx";
+import {FragmentType, GetFooterFragmentDoc} from "./gql";
 
 type LayoutProps = {
     children: ReactNode
@@ -9,10 +10,11 @@ type LayoutProps = {
     navigationCenter?: ReactNode
     navigationEnd?: ReactNode
     subNav?: ReactNode
+    getFooterFragment: FragmentType<typeof GetFooterFragmentDoc>
 }
 
 export const Layout = (props: LayoutProps) => {
-    const {children, navigationStart, navigationCenter, navigationEnd, subNav} = props;
+    const {children, navigationStart, navigationCenter, navigationEnd, subNav, getFooterFragment} = props;
 
     return (
         <div className="flex flex-col h-screen overflow-hidden bg-base-100 bg-striped">
@@ -24,7 +26,7 @@ export const Layout = (props: LayoutProps) => {
                 {children}
             </main>
 
-            <Footer/>
+            <Footer getFooterFragment={getFooterFragment}/>
         </div>
     );
 }

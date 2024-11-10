@@ -6,10 +6,16 @@ query GetEvent($code: String!) {
             id
         }
     }
+    authenticatedAdmin {
+        id
+    }
     event(code: $code) {
         id
         location {
             name
+            owners {
+                id
+            }
         }
         code {
             value
@@ -19,18 +25,10 @@ query GetEvent($code: String!) {
             count
             uniqueCount
             uniqueCountryCount
-            countryStats {
-                country
-                uniqueCount
-            }
         }
-        participants {
-            id
-            name
-            jidCodeStats {
-                uniqueCount
-                uniqueCountryCount
-            }
-        }
+        ...Countries
+        ...Participants
+        ...StatBar
     }
+    ...GetFooter
 }

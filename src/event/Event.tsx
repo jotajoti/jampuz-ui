@@ -1,80 +1,75 @@
-import {useParams} from "react-router-dom";
-import {useQuery, useSubscription} from "urql";
+import {Link, Outlet, useLoaderData, useRevalidator} from "react-router-dom";
+import {useSubscription} from "urql";
 import {Trans} from "@lingui/macro";
 
 import {Layout} from "../Layout.tsx";
-import {EventSubscriptionDocument, GetEventDocument} from "../gql";
+import {EventSubscriptionDocument, GetEventQuery} from "../gql";
 import {Dashboard} from "../components/Dashboard.tsx";
-import {Map} from "../components/map";
 import {JidCodeHeader} from "./JidCodeHeader.tsx";
-import {ParticipantsTable} from "./ParticipantsTable.tsx";
-import {CountriesTable} from "./CountriesTable.tsx";
-import {EventStatBar} from "./EventStatBar.tsx";
-import {AddJidCodeButton} from "./AddJidCode.tsx";
-import {JoinEventButton} from "./JoinEvent.tsx";
+import {ParticipantsTable} from "./participants";
+import {CountriesMap, CountriesTable} from "./countries";
+import {EventStatBar} from "./statbar";
+import {AuthenticatedButtons} from "./AuthenticatedButtons.tsx";
+import {isAuthenticated} from "./authenticationUtils.ts";
 
 export const Event = () => {
-    const {eventCode} = useParams();
+    const loaderData = useLoaderData() as GetEventQuery;
+    const reValidator = useRevalidator();
 
-    const [{data}, reloadEvent] = useQuery({
-        query: GetEventDocument,
-        variables: {
-            code: eventCode!,
-        },
-        requestPolicy: 'cache-first'
-    });
+    const reloadEvent = () => reValidator.revalidate();
 
     useSubscription({
         query: EventSubscriptionDocument,
         variables: {
-            eventId: data!.event!.id
+            eventId: loaderData!.event!.id
         }
-    }, () => reloadEvent({requestPolicy: 'network-only'}));
+    }, () => reloadEvent());
 
     const navigationButtons = (
-        <>
-            {data?.authenticatedParticipant?.event.id === data!.event!.id
-                ? <AddJidCodeButton eventId={data!.event!.id} reloadEvent={reloadEvent}/>
-                : <JoinEventButton data={data!} reloadEvent={reloadEvent}/>
-            }
-        </>
+        isAuthenticated(loaderData)
+            ? <AuthenticatedButtons data={loaderData} reloadEvent={reloadEvent}/>
+            : <Link to={`/${loaderData.event?.code.value}/join`} className="btn btn-ghost"><Trans>Join</Trans></Link>
     );
 
-    const locationName = data!.event!.location.name;
-    const eventYear = data!.event!.year;
+    const locationName = loaderData!.event!.location.name;
+    const eventYear = loaderData!.event!.year;
     return (
-        <Layout
-            navigationStart={
-                <a className="btn btn-ghost text-xl">
-                    <Trans comment="Event title">{locationName} {eventYear}</Trans>
-                </a>
-            }
-            navigationCenter={<JidCodeHeader jidCode={data!.event!.code!.value}/>}
-            navigationEnd={navigationButtons}
-            subNav={<EventStatBar data={data!}/>}
-        >
-
-            <Dashboard columns={4} widgets={[{
-                key: "map",
-                title: <Trans>Map</Trans>,
-                content: maximized => (
-                    <div>
-                        <Map detailed={maximized} countries={data!.event!.jidCodeStats.countryStats.map(country => ({
-                            code: country.country.toUpperCase(),
-                            fill: "fill-accent",
-                        }))}/>
+        <>
+            <Layout
+                navigationStart={
+                    <a className="btn btn-ghost text-xl">
+                        <Trans comment="Event title">{locationName} {eventYear}</Trans>
+                    </a>
+                }
+                navigationCenter={
+                    <div className="invisible md:visible">
+                        <JidCodeHeader jidCode={loaderData!.event!.code!.value}/>
                     </div>
-                )
-            }, {
-                key: "participantList",
-                title: <Trans>Participants</Trans>,
-                span: 2,
-                content: <ParticipantsTable data={data!}/>
-            }, {
-                key: "countriesList",
-                title: <Trans>Countries</Trans>,
-                content: <CountriesTable data={data!}/>
-            }]}/>
-        </Layout>
+                }
+                navigationEnd={navigationButtons}
+                subNav={<EventStatBar statBarFragmentDoc={loaderData.event!}/>}
+                getFooterFragment={loaderData}
+            >
+
+                <Dashboard columns={4} widgets={[{
+                    key: "map",
+                    title: <Trans>Map</Trans>,
+                    content: maximized => <CountriesMap countriesFragment={loaderData.event!} maximized={maximized}/>
+                }, {
+                    key: "participantList",
+                    title: <Trans>Participants</Trans>,
+                    span: 2,
+                    content: <ParticipantsTable
+                        participantsFragmentDoc={loaderData.event!}
+                        authenticatedParticipantId={loaderData.authenticatedParticipant?.id}
+                    />
+                }, {
+                    key: "countriesList",
+                    title: <Trans>Countries</Trans>,
+                    content: <CountriesTable countriesFragmentDoc={loaderData.event!}/>
+                }]}/>
+            </Layout>
+            <Outlet/>
+        </>
     )
 }

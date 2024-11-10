@@ -1,0 +1,9 @@
+query GetEventDetails($eventCode: String!) {
+    event(code: $eventCode) {
+        id
+        location {
+            name
+        }
+        year
+    }
+}
