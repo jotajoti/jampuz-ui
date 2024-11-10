@@ -1,0 +1,9 @@
+fragment StatBar on Event {
+    participants {
+        id
+    }
+    jidCodeStats {
+        count
+        uniqueCountryCount
+    }
+}

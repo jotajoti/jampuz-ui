@@ -1,13 +1,15 @@
-import {useQuery} from "urql";
 import {Trans} from "@lingui/macro";
 
-import {FooterQueryDocument} from "../gql";
 import {ThemeSelector} from "./ThemeSelector.tsx";
+import {FragmentType, GetFooterFragmentDoc, useFragment} from "../gql";
+import {LanguageSelector} from "./LanguageSelector.tsx";
 
-export const Footer = () => {
-    const [{data}] = useQuery({
-        query: FooterQueryDocument
-    });
+type FooterProps = {
+    getFooterFragment: FragmentType<typeof GetFooterFragmentDoc>
+}
+
+export const Footer = ({getFooterFragment}: FooterProps) => {
+    const getFooter = useFragment(GetFooterFragmentDoc, getFooterFragment);
 
     const uiVersion =
         <a href={`https://github.com/jotajoti/jampuz-ui/releases/tag/v${APP_VERSION}`}
@@ -18,11 +20,11 @@ export const Footer = () => {
         </a>
 
     const serverVersion =
-        <a href={`https://github.com/jotajoti/jampuz-server/releases/tag/v${data?.serverVersion}`}
+        <a href={`https://github.com/jotajoti/jampuz-server/releases/tag/v${getFooter?.serverVersion}`}
            target="_blank"
            className="link"
            rel="noopener noreferrer">
-            {data?.serverVersion}
+            {getFooter?.serverVersion}
         </a>
 
     return (
@@ -31,6 +33,7 @@ export const Footer = () => {
                 © 2020-{new Date().getFullYear()}
 
                 <ThemeSelector/>
+                <LanguageSelector/>
             </aside>
             <nav className="grid-flow-col gap-4 place-self-center justify-self-end hidden md:block">
                 <Trans>Client version: {uiVersion}</Trans> -

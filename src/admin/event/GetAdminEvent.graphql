@@ -1,0 +1,18 @@
+query GetAdminEvent($eventId: ID!) {
+    eventById(eventId: $eventId) {
+        id
+        code {
+            value
+        }
+        year
+        jidCodeStats {
+            count
+            uniqueCount
+            uniqueCountries
+        }
+        location {
+            id
+            name
+        }
+    }
+}

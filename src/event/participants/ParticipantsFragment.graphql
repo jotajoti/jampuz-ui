@@ -1,0 +1,10 @@
+fragment Participants on Event {
+    participants {
+        id
+        name
+        jidCodeStats {
+            uniqueCount
+            uniqueCountryCount
+        }
+    }
+}

@@ -1,0 +1,6 @@
+fragment GetAdminLocationOwners on Location {
+    owners {
+        id
+        name
+    }
+}

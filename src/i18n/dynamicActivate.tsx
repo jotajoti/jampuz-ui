@@ -1,11 +1,13 @@
 import {i18n} from "@lingui/core";
+import {detect, fromNavigator, fromStorage} from "@lingui/detect-locale";
 
 export const locales = [
     "en",
     "da",
-]
+];
 
-export const defaultLocale = "en";
+const DEFAULT_FALLBACK = () => "en";
+export const detectLanguage = () => detect(fromStorage("lang"), fromNavigator(), DEFAULT_FALLBACK)!;
 
 /**
  * We do a dynamic import of just the catalog that we need

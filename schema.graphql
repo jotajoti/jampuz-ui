@@ -25,6 +25,7 @@ input CreateAdmin {
 }
 
 input CreateEventInput {
+  active: Boolean = false
   code: String!
   locationId: ID!
   year: Int!
@@ -43,6 +44,7 @@ input CreateParticipantInput {
 scalar Date
 
 type Event {
+  active: Boolean!
   code: JidCode!
   id: ID!
   """ Returns true if event is latest for the location"""
@@ -104,6 +106,7 @@ type Mutation {
   """ Participant is taken from authentication"""
   registerFoundJidCode(input: RegisterFoundJidCode!): FoundJidCode
   removeOwner(adminId: ID!, locationId: ID!): Location
+  updateEvent(input: UpdateEventInput!): Event
 }
 
 type Participant {
@@ -129,9 +132,19 @@ type Query {
    participant is associated with the event
   """
   authenticatedParticipant(eventJidCode: String, year: Int): Participant
-  """ If no year is provided the latest event is taken"""
+  """
+   If no year is provided the latest event is taken
+   Can be loaded without authentication
+  """
   event(code: String!, year: Int): Event
-  """ Only available to authenticated admins"""
+  """
+   Load specific event by ID.
+   Requires admin authentication
+  """
+  eventById(eventId: ID!): Event
+  """ Only returns location if owned by authenticated admin"""
+  location(locationId: ID!): Location
+  """ Only returns locations owned by authenticated admin"""
   locations: [Location!]
   serverVersion: String!
 }
@@ -154,4 +167,11 @@ input RegisterFoundJidCode {
 type Subscription {
   dummy: String
   eventUpdated(eventId: ID!): ID!
+}
+
+input UpdateEventInput {
+  active: Boolean
+  code: String
+  id: ID!
+  year: Int
 }

@@ -1,0 +1,8 @@
+fragment Countries on Event {
+    jidCodeStats {
+        countryStats {
+            country
+            uniqueCount
+        }
+    }
+}
