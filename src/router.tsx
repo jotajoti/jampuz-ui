@@ -12,10 +12,12 @@ import {
     adminLocationLoader,
     AdminLogin,
     adminLoginAction,
+    adminLoginLoader,
     adminLogoutLoader,
     AdminOverview,
     adminOverviewLoader
 } from "./admin";
+import {AdminRegister, adminRegisterAction, adminRegisterLoader} from "./admin/register";
 
 export const router = createBrowserRouter([{
     path: "/",
@@ -58,8 +60,14 @@ export const router = createBrowserRouter([{
     path: "/admin/login",
     element: <AdminLogin/>,
     action: adminLoginAction,
+    loader: adminLoginLoader,
 }, {
     path: "/admin/logout",
     element: <div></div>,
     loader: adminLogoutLoader,
+}, {
+    path: "/admin/register",
+    element: <AdminRegister/>,
+    action: adminRegisterAction,
+    loader: adminRegisterLoader,
 }]);
