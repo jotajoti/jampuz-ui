@@ -1,10 +1,12 @@
-import {createBrowserRouter} from "react-router-dom";
+import {createBrowserRouter, redirect} from "react-router-dom";
 
 import {Event, eventLoader, eventLogoutLoader, JoinEvent, joinEventAction, joinEventLoader} from "./event";
 import {ErrorPage} from "./ErrorPage.tsx";
 import {Landing, landingLoader} from "./landing";
 import {
     Admin,
+    AdminCreateLocation,
+    adminCreateLocationAction,
     AdminEvent,
     adminEventLoader,
     adminLoader,
@@ -45,10 +47,18 @@ export const router = createBrowserRouter([{
     loader: adminLoader,
     children: [{
         index: true,
+        loader: () => redirect("/admin/locations"),
+    }, {
+        path: "locations",
         element: <AdminOverview/>,
         loader: adminOverviewLoader,
+        children: [{
+            path: "new",
+            element: <AdminCreateLocation/>,
+            action: adminCreateLocationAction,
+        }]
     }, {
-        path: "location/:locationId",
+        path: "locations/:locationId",
         element: <AdminLocation/>,
         loader: adminLocationLoader,
     }, {

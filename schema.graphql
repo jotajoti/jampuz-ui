@@ -102,7 +102,6 @@ type Mutation {
   """
   createLocation(input: CreateLocationInput!): Location
   createParticipant(input: CreateParticipantInput!): Participant
-  ping: String
   """ Participant is taken from authentication"""
   registerFoundJidCode(input: RegisterFoundJidCode!): FoundJidCode
   removeOwner(adminId: ID!, locationId: ID!): Location
@@ -165,7 +164,6 @@ input RegisterFoundJidCode {
 }
 
 type Subscription {
-  dummy: String
   eventUpdated(eventId: ID!): ID!
 }
 

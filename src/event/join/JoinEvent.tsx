@@ -25,7 +25,7 @@ export const JoinEvent = () => {
         type: "submit",
         name: "joinButton",
         classNames: "btn-primary",
-    }]
+    }];
 
     return (
         <RouterDialog title={<Trans comment="Join modal title">Join {locationName} {eventYear}</Trans>}

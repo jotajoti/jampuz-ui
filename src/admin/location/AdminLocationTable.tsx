@@ -20,7 +20,7 @@ export const AdminLocationTable = ({getAdminLocationsFragment}: AdminLocationTab
             key: "name",
             header: <Trans>Name</Trans>,
             getValue: location => (
-                <Link className="link" to={`/admin/location/${location.id}`}>{location.name}</Link>
+                <Link className="link" to={`/admin/locations/${location.id}`}>{location.name}</Link>
             ),
             sort: stringSort(location => location.name),
             sortAscendingDefault: true,
