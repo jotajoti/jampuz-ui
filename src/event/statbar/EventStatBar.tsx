@@ -1,3 +1,4 @@
+import {i18n} from "@lingui/core";
 import {Trans} from "@lingui/macro";
 
 import {StatBar} from "../../components/StatBar.tsx";
@@ -14,13 +15,13 @@ export const EventStatBar = ({statBarFragmentDoc}: EventStatBarProps) => {
         <StatBar config={{
             stats: [{
                 title: <Trans>Participants</Trans>,
-                value: statBarFragment!.participants.length
+                value: i18n.number(statBarFragment!.participants.length),
             }, {
                 title: <Trans>JID Codes</Trans>,
-                value: statBarFragment!.jidCodeStats.count
+                value: i18n.number(statBarFragment!.jidCodeStats.count),
             }, {
                 title: <Trans>Countries</Trans>,
-                value: statBarFragment!.jidCodeStats.uniqueCountryCount
+                value: i18n.number(statBarFragment!.jidCodeStats.uniqueCountryCount),
             }]
         }}/>
     );

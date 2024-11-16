@@ -1,10 +1,11 @@
+import {Link} from "react-router-dom";
+import {RocketLaunchIcon, StopIcon} from "@heroicons/react/16/solid";
+import {i18n} from "@lingui/core";
 import {t, Trans} from "@lingui/macro";
 
 import {numberSort, stringSort, Table, TableDef} from "../../components/table";
 import {ArrayElement} from "../../utils";
 import {FragmentType, GetAdminLocationEventsFragmentDoc, useFragment} from "../../gql";
-import {Link} from "react-router-dom";
-import {RocketLaunchIcon, StopIcon} from "@heroicons/react/16/solid";
 
 type AdminLocationEventTableProps = {
     locationId: string
@@ -52,13 +53,13 @@ export const AdminLocationEventTable = ({locationId, getAdminLocationEventsFragm
         }, {
             key: "participants",
             header: <Trans>Participants</Trans>,
-            getValue: event => event.participants.length,
+            getValue: event => i18n.number(event.participants.length),
             sort: numberSort(event => event.participants.length),
             sortAscendingDefault: false,
         }, {
             key: "codeCount",
             header: <Trans># JID codes</Trans>,
-            getValue: event => event.jidCodeStats.count,
+            getValue: event => i18n.number(event.jidCodeStats.count),
             sort: numberSort(event => event.jidCodeStats.count),
             sortAscendingDefault: false,
         }]

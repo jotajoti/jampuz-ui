@@ -1,3 +1,4 @@
+import {i18n} from "@lingui/core";
 import {Trans} from "@lingui/macro";
 
 import {numberSort, stringSort, Table, TableDef} from "../../components/table";
@@ -27,14 +28,14 @@ export const ParticipantsTable = ({participantsFragmentDoc, authenticatedPartici
         }, {
             key: "jidCodes",
             header: <Trans>JID Codes</Trans>,
-            getValue: participant => participant.jidCodeStats.uniqueCount,
+            getValue: participant => i18n.number(participant.jidCodeStats.uniqueCount),
             sort: numberSort(participant => participant.jidCodeStats.uniqueCount),
             sortAscendingDefault: false,
             extraClassNames: "text-right",
         }, {
             key: "countries",
             header: <Trans>Countries</Trans>,
-            getValue: participant => participant.jidCodeStats.uniqueCountryCount,
+            getValue: participant => i18n.number(participant.jidCodeStats.uniqueCountryCount),
             sort: numberSort(participant => participant.jidCodeStats.uniqueCountryCount),
             sortAscendingDefault: false,
             extraClassNames: "text-right",

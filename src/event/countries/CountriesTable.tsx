@@ -1,3 +1,4 @@
+import {i18n} from "@lingui/core";
 import {Trans} from "@lingui/macro";
 
 import {numberSort, stringSort, Table, TableDef} from "../../components/table";
@@ -25,7 +26,7 @@ export const CountriesTable = ({countriesFragmentDoc}: CountriesTableProps) => {
         }, {
             key: "count",
             header: <Trans>Count</Trans>,
-            getValue: countryStat => countryStat.uniqueCount,
+            getValue: countryStat => i18n.number(countryStat.uniqueCount),
             sort: numberSort(countryStat => countryStat.uniqueCount),
             sortAscendingDefault: false
         }]
