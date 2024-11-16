@@ -20,6 +20,7 @@ import {
     adminOverviewLoader
 } from "./admin";
 import {AdminRegister, adminRegisterAction, adminRegisterLoader} from "./admin/register";
+import {AdminCreateEvent, adminCreateEventAction} from "./admin/event/new";
 
 export const router = createBrowserRouter([{
     path: "/",
@@ -61,8 +62,13 @@ export const router = createBrowserRouter([{
         path: "locations/:locationId",
         element: <AdminLocation/>,
         loader: adminLocationLoader,
+        children: [{
+            path: "events/new",
+            element: <AdminCreateEvent/>,
+            action: adminCreateEventAction,
+        }],
     }, {
-        path: "event/:eventId",
+        path: "locations/:locationId/events/:eventId",
         element: <AdminEvent/>,
         loader: adminEventLoader,
     }]

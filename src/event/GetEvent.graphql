@@ -12,6 +12,7 @@ query GetEvent($code: String!) {
     event(code: $code) {
         id
         location {
+            id
             name
             owners {
                 id

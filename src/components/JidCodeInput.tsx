@@ -7,6 +7,8 @@ type JidCodeInputProps = {
     onValidJidCode: (validJidCode: string | null) => void
     jidCode: string
     setJidCode: (jidCode: string) => void
+    style?: "form" | "large"
+    name?: string
 }
 
 export const jidCodeRegex = /[1-7]([A-Z]{2})[0-9]{2}[A-Z]/
@@ -28,7 +30,7 @@ const maskitoOptions: MaskitoOptions = {
     ],
 }
 
-export const JidCodeInput = ({onValidJidCode, jidCode, setJidCode}: JidCodeInputProps) => {
+export const JidCodeInput = ({onValidJidCode, jidCode, setJidCode, style, name}: JidCodeInputProps) => {
 
     const inputRef = useMaskito({
         options: maskitoOptions,
@@ -48,6 +50,17 @@ export const JidCodeInput = ({onValidJidCode, jidCode, setJidCode}: JidCodeInput
         }
     }
 
+    const styleClasses = () => {
+        switch (style) {
+            case "form":
+                return "";
+            case "large":
+                return `input-lg tracking-widest font-mono text-center${validJidCode ? ' input-success' : ''}`;
+            default:
+                return "";
+        }
+    }
+
     return (
         <input
             type="text"
@@ -55,9 +68,10 @@ export const JidCodeInput = ({onValidJidCode, jidCode, setJidCode}: JidCodeInput
             pattern={jidCodeRegex.source}
             required={true}
             value={jidCode}
+            name={name}
             placeholder={t`Add Code`}
             onInput={onValueUpdated}
-            className={`input input-bordered input-lg tracking-widest font-mono text-center ${validJidCode ? 'input-success' : ''}`}
+            className={`input input-bordered ${styleClasses()}`}
         />
     );
 }

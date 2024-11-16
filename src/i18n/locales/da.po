@@ -1,23 +1,23 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2024-11-13 23:35+0100\n"
+"POT-Creation-Date: 2024-11-16 20:43+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: da\n"
 
-#: src/admin/location/AdminLocationEventTable.tsx:59
+#: src/admin/location/AdminLocationEventTable.tsx:60
 msgid "# JID codes"
 msgstr "# JID koder"
 
-#: src/admin/location/AdminLocationEventTable.tsx:36
-#: src/admin/location/AdminLocationEventTable.tsx:40
+#: src/admin/location/AdminLocationEventTable.tsx:37
 #: src/admin/location/AdminLocationEventTable.tsx:41
+#: src/admin/location/AdminLocationEventTable.tsx:42
 msgid "Active"
 msgstr "Aktiv"
 
-#: src/components/JidCodeInput.tsx:58
+#: src/components/JidCodeInput.tsx:72
 msgid "Add Code"
 msgstr "Tilføj kode"
 
@@ -25,6 +25,18 @@ msgstr "Tilføj kode"
 #: src/event/AddJidCode.tsx:84
 msgid "Add JID Code"
 msgstr "Tilføj JID kode"
+
+#: src/admin/event/new/AdminCreateEvent.tsx:30
+#: src/admin/location/AdminLocation.tsx:37
+msgid "Add event"
+msgstr ""
+"Tilføj arrangement\n"
+""
+
+#: src/admin/location/new/AdminCreateLocation.tsx:27
+#: src/admin/overview/AdminOverview.tsx:30
+msgid "Add location"
+msgstr "Tilføj sted"
 
 #: src/event/AuthenticatedButtons.tsx:21
 #: src/landing/Landing.tsx:15
@@ -50,6 +62,10 @@ msgstr "Har du allerede en konto? <0>Log ind</0>"
 #: src/utils/countries.tsx:25
 msgid "American Samoa"
 msgstr "Amerikansk Samoa"
+
+#: src/gql/serverErrors.ts:42
+msgid "An event is already created with the JID code and year"
+msgstr "Der er allerede oprettet et arrangement for det givne år og JID kode"
 
 #: src/utils/countries.tsx:7
 msgid "Andorra"
@@ -87,7 +103,7 @@ msgstr "Australien"
 msgid "Austria"
 msgstr "Østrig"
 
-#: src/gql/serverErrors.ts:40
+#: src/gql/serverErrors.ts:44
 msgid "Authentication failed"
 msgstr "Login mislykkedes"
 
@@ -195,6 +211,8 @@ msgstr "Canada"
 msgid "Canary Islands"
 msgstr "De Kanariske Øer"
 
+#: src/admin/event/new/AdminCreateEvent.tsx:19
+#: src/admin/location/new/AdminCreateLocation.tsx:16
 #: src/event/AddJidCode.tsx:55
 #: src/event/join/JoinEvent.tsx:20
 msgid "Cancel"
@@ -282,6 +300,11 @@ msgstr "Lande"
 msgid "Country"
 msgstr "Land"
 
+#: src/admin/event/new/AdminCreateEvent.tsx:23
+#: src/admin/location/new/AdminCreateLocation.tsx:20
+msgid "Create"
+msgstr "Opret"
+
 #: src/utils/countries.tsx:199
 msgid "Croatia"
 msgstr "Kroatien"
@@ -351,6 +374,10 @@ msgstr "El Salvador"
 msgid "Email"
 msgstr "E-mail"
 
+#: src/gql/serverErrors.ts:46
+msgid "Email already associated with account"
+msgstr "E-mail er allerede knyttet til en anden konto"
+
 #: src/utils/languages.tsx:8
 msgid "English"
 msgstr "Engelsk"
@@ -379,7 +406,7 @@ msgstr "Etiopien"
 msgid "Event #"
 msgstr "Arrangement #"
 
-#: src/admin/location/AdminLocation.tsx:24
+#: src/admin/location/AdminLocation.tsx:26
 msgid "Events"
 msgstr "Arrangementer"
 
@@ -536,7 +563,7 @@ msgstr "Italien"
 msgid "JID Codes"
 msgstr "JID koder"
 
-#: src/admin/location/AdminLocationEventTable.tsx:30
+#: src/admin/location/AdminLocationEventTable.tsx:31
 msgid "JID code"
 msgstr "JID kode"
 
@@ -630,7 +657,12 @@ msgstr "Liechtenstein"
 msgid "Lithuania"
 msgstr "Litauen"
 
-#: src/admin/overview/AdminOverview.tsx:24
+#: src/admin/event/new/AdminCreateEvent.tsx:41
+#: src/admin/location/new/AdminCreateLocation.tsx:30
+msgid "Location name"
+msgstr "Stedets navn"
+
+#: src/admin/overview/AdminOverview.tsx:25
 msgid "Locations"
 msgstr "Steder"
 
@@ -807,8 +839,8 @@ msgstr "Nordmarianerne"
 msgid "Norway"
 msgstr "Norge"
 
-#: src/admin/location/AdminLocationEventTable.tsx:44
 #: src/admin/location/AdminLocationEventTable.tsx:45
+#: src/admin/location/AdminLocationEventTable.tsx:46
 msgid "Not active"
 msgstr "Ikke aktiv"
 
@@ -816,7 +848,7 @@ msgstr "Ikke aktiv"
 msgid "Oman"
 msgstr "Oman"
 
-#: src/admin/location/AdminLocation.tsx:29
+#: src/admin/location/AdminLocation.tsx:32
 msgid "Owners"
 msgstr "Ejere"
 
@@ -844,11 +876,11 @@ msgstr "Papua Ny Guinea"
 msgid "Paraguay"
 msgstr "Paraguay"
 
-#: src/gql/serverErrors.ts:38
+#: src/gql/serverErrors.ts:40
 msgid "Participant name already taken"
 msgstr "Deltagerens navn er allerede taget"
 
-#: src/admin/location/AdminLocationEventTable.tsx:53
+#: src/admin/location/AdminLocationEventTable.tsx:54
 #: src/event/Event.tsx:60
 #: src/event/statbar/EventStatBar.tsx:16
 msgid "Participants"
@@ -1175,7 +1207,7 @@ msgstr "Vestsahara"
 msgid "What is your name?"
 msgstr "Hvad er dit navn?"
 
-#: src/admin/location/AdminLocationEventTable.tsx:22
+#: src/admin/location/AdminLocationEventTable.tsx:23
 msgid "Year"
 msgstr "År"
 
