@@ -16,6 +16,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
 const documents = {
     "query Admin {\n  authenticatedAdmin {\n    id\n    name\n  }\n  ...GetFooter\n}": types.AdminDocument,
     "query GetAdminEvent($eventId: ID!) {\n  eventById(eventId: $eventId) {\n    id\n    code {\n      value\n    }\n    year\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountries\n    }\n    location {\n      id\n      name\n    }\n  }\n}": types.GetAdminEventDocument,
+    "mutation CreateEvent($input: CreateEventInput!) {\n  createEvent(input: $input) {\n    id\n  }\n}": types.CreateEventDocument,
     "query GetAdminLocation($locationId: ID!) {\n  location(locationId: $locationId) {\n    id\n    name\n    ...GetAdminLocationEvents\n    ...GetAdminLocationOwners\n  }\n}": types.GetAdminLocationDocument,
     "fragment GetAdminLocationEvents on Location {\n  events {\n    id\n    code {\n      value\n    }\n    year\n    active\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountryCount\n    }\n    participants {\n      id\n    }\n  }\n}": types.GetAdminLocationEventsFragmentDoc,
     "fragment GetAdminLocationOwners on Location {\n  owners {\n    id\n    name\n  }\n}": types.GetAdminLocationOwnersFragmentDoc,
@@ -28,7 +29,7 @@ const documents = {
     "mutation CreateAdmin($input: CreateAdmin!) {\n  createAdmin(input: $input) {\n    id\n  }\n}": types.CreateAdminDocument,
     "fragment GetFooter on Query {\n  serverVersion\n}": types.GetFooterFragmentDoc,
     "subscription EventSubscription($eventId: ID!) {\n  eventUpdated(eventId: $eventId)\n}": types.EventSubscriptionDocument,
-    "query GetEvent($code: String!) {\n  authenticatedParticipant {\n    id\n    name\n    event {\n      id\n    }\n  }\n  authenticatedAdmin {\n    id\n  }\n  event(code: $code) {\n    id\n    location {\n      name\n      owners {\n        id\n      }\n    }\n    code {\n      value\n    }\n    year\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountryCount\n    }\n    ...Countries\n    ...Participants\n    ...StatBar\n  }\n  ...GetFooter\n}": types.GetEventDocument,
+    "query GetEvent($code: String!) {\n  authenticatedParticipant {\n    id\n    name\n    event {\n      id\n    }\n  }\n  authenticatedAdmin {\n    id\n  }\n  event(code: $code) {\n    id\n    location {\n      id\n      name\n      owners {\n        id\n      }\n    }\n    code {\n      value\n    }\n    year\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountryCount\n    }\n    ...Countries\n    ...Participants\n    ...StatBar\n  }\n  ...GetFooter\n}": types.GetEventDocument,
     "mutation RegisterJidCode($input: RegisterFoundJidCode!) {\n  registerFoundJidCode(input: $input) {\n    id\n  }\n}": types.RegisterJidCodeDocument,
     "fragment Countries on Event {\n  jidCodeStats {\n    countryStats {\n      country\n      uniqueCount\n    }\n  }\n}": types.CountriesFragmentDoc,
     "mutation AuthenticateParticipant($eventId: ID!, $name: String!, $pinCode: String!) {\n  authenticateParticipant(eventId: $eventId, name: $name, pinCode: $pinCode)\n}": types.AuthenticateParticipantDocument,
@@ -61,6 +62,10 @@ export function graphql(source: "query Admin {\n  authenticatedAdmin {\n    id\n
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function graphql(source: "query GetAdminEvent($eventId: ID!) {\n  eventById(eventId: $eventId) {\n    id\n    code {\n      value\n    }\n    year\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountries\n    }\n    location {\n      id\n      name\n    }\n  }\n}"): (typeof documents)["query GetAdminEvent($eventId: ID!) {\n  eventById(eventId: $eventId) {\n    id\n    code {\n      value\n    }\n    year\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountries\n    }\n    location {\n      id\n      name\n    }\n  }\n}"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "mutation CreateEvent($input: CreateEventInput!) {\n  createEvent(input: $input) {\n    id\n  }\n}"): (typeof documents)["mutation CreateEvent($input: CreateEventInput!) {\n  createEvent(input: $input) {\n    id\n  }\n}"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
@@ -112,7 +117,7 @@ export function graphql(source: "subscription EventSubscription($eventId: ID!) {
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "query GetEvent($code: String!) {\n  authenticatedParticipant {\n    id\n    name\n    event {\n      id\n    }\n  }\n  authenticatedAdmin {\n    id\n  }\n  event(code: $code) {\n    id\n    location {\n      name\n      owners {\n        id\n      }\n    }\n    code {\n      value\n    }\n    year\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountryCount\n    }\n    ...Countries\n    ...Participants\n    ...StatBar\n  }\n  ...GetFooter\n}"): (typeof documents)["query GetEvent($code: String!) {\n  authenticatedParticipant {\n    id\n    name\n    event {\n      id\n    }\n  }\n  authenticatedAdmin {\n    id\n  }\n  event(code: $code) {\n    id\n    location {\n      name\n      owners {\n        id\n      }\n    }\n    code {\n      value\n    }\n    year\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountryCount\n    }\n    ...Countries\n    ...Participants\n    ...StatBar\n  }\n  ...GetFooter\n}"];
+export function graphql(source: "query GetEvent($code: String!) {\n  authenticatedParticipant {\n    id\n    name\n    event {\n      id\n    }\n  }\n  authenticatedAdmin {\n    id\n  }\n  event(code: $code) {\n    id\n    location {\n      id\n      name\n      owners {\n        id\n      }\n    }\n    code {\n      value\n    }\n    year\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountryCount\n    }\n    ...Countries\n    ...Participants\n    ...StatBar\n  }\n  ...GetFooter\n}"): (typeof documents)["query GetEvent($code: String!) {\n  authenticatedParticipant {\n    id\n    name\n    event {\n      id\n    }\n  }\n  authenticatedAdmin {\n    id\n  }\n  event(code: $code) {\n    id\n    location {\n      id\n      name\n      owners {\n        id\n      }\n    }\n    code {\n      value\n    }\n    year\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountryCount\n    }\n    ...Countries\n    ...Participants\n    ...StatBar\n  }\n  ...GetFooter\n}"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

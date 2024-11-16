@@ -1,6 +1,7 @@
 import {useEffect} from "react";
-import {Trans} from "@lingui/macro";
-import {useLoaderData} from "react-router-dom";
+import {t, Trans} from "@lingui/macro";
+import {Link, Outlet, useLoaderData} from "react-router-dom";
+import {PlusIcon} from "@heroicons/react/24/solid";
 
 import {Dashboard} from "../../components/Dashboard.tsx";
 import {GetAdminLocationQuery} from "../../gql";
@@ -19,15 +20,29 @@ export const AdminLocation = () => {
     }, [setNavigationCenter, setNavigationButtons, loaderData]);
 
     return (
-        <Dashboard columns={3} widgets={[{
-            key: "events",
-            title: <Trans>Events</Trans>,
-            content: <AdminLocationEventTable getAdminLocationEventsFragment={loaderData.location!}/>,
-            span: 2,
-        }, {
-            key: "owners",
-            title: <Trans>Owners</Trans>,
-            content: <AdminLocationOwnerTable getAdminLocationOwnerFragment={loaderData.location!}/>,
-        }]}/>
+        <>
+            <Dashboard columns={3} widgets={[{
+                key: "events",
+                title: <Trans>Events</Trans>,
+                content: <AdminLocationEventTable locationId={loaderData.location!.id}
+                                                  getAdminLocationEventsFragment={loaderData.location!}/>,
+                span: 2,
+            }, {
+                key: "owners",
+                title: <Trans>Owners</Trans>,
+                content: <AdminLocationOwnerTable getAdminLocationOwnerFragment={loaderData.location!}/>,
+            }]}/>
+
+            <div className="toast mb-14">
+                <div className="tooltip tooltip-left" data-tip={t`Add event`}>
+                    <Link to={`/admin/locations/${loaderData.location?.id}/events/new`}
+                          className="btn btn-primary btn-circle">
+                        <PlusIcon className="size-7"/>
+                    </Link>
+                </div>
+            </div>
+
+            <Outlet/>
+        </>
     )
 }

@@ -17,7 +17,7 @@ export const AuthenticatedButtons = ({data, reloadEvent}: AuthenticatedButtonsPr
 
     if (isAdminAuthenticated(data)) {
         dropdownLinks.push(
-            <Link to={`/admin/event/${data.event?.id}`}>
+            <Link to={`/admin/locations/${data.event?.location.id}/events/${data.event?.id}`}>
                 <Trans>Admin</Trans>
             </Link>
         );

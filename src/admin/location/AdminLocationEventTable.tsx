@@ -7,10 +7,11 @@ import {Link} from "react-router-dom";
 import {RocketLaunchIcon, StopIcon} from "@heroicons/react/16/solid";
 
 type AdminLocationEventTableProps = {
+    locationId: string
     getAdminLocationEventsFragment: FragmentType<typeof GetAdminLocationEventsFragmentDoc>
 }
 
-export const AdminLocationEventTable = ({getAdminLocationEventsFragment}: AdminLocationEventTableProps) => {
+export const AdminLocationEventTable = ({locationId, getAdminLocationEventsFragment}: AdminLocationEventTableProps) => {
     const getAdminLocationEvents = useFragment(GetAdminLocationEventsFragmentDoc, getAdminLocationEventsFragment);
 
     const events = getAdminLocationEvents.events!;
@@ -21,7 +22,7 @@ export const AdminLocationEventTable = ({getAdminLocationEventsFragment}: AdminL
             key: "year",
             header: <Trans>Year</Trans>,
             getValue: event => (
-                <Link to={`/admin/event/${event.id}`} className="link">{event.year}</Link>
+                <Link to={`/admin/locations/${locationId}/events/${event.id}`} className="link">{event.year}</Link>
             ),
             sort: numberSort(event => event.year),
             sortAscendingDefault: false,

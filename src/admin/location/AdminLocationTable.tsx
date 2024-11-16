@@ -35,7 +35,7 @@ export const AdminLocationTable = ({getAdminLocationsFragment}: AdminLocationTab
             header: <Trans>Latest Event</Trans>,
             getValue: location => (
                 location.latestEvent &&
-                <Link className="link" to={`/admin/event/${location.latestEvent.id}`}>{location.latestEvent.year}</Link>
+                <Link className="link" to={`/admin/locations/${location.id}/events/${location.latestEvent.id}`}>{location.latestEvent.year}</Link>
             ),
             sort: numberSort(location => location.latestEvent ? location.latestEvent.year : 0),
             sortAscendingDefault: false,

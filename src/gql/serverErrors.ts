@@ -3,6 +3,7 @@ import {t} from "@lingui/macro";
 
 export enum ServerErrorCode {
     PARTICIPANT_NAME_NOT_AVAILABLE = 1,
+    EVENT_CODE_AND_YEAR_NOT_AVAILABLE = 7,
     ADMIN_AUTHENTICATION_FAILED = 8,
     EMAIL_NOT_AVAILABLE = 10,
 }
@@ -37,6 +38,8 @@ export const translateErrorCode = (errorCode: ServerErrorCode) => {
     switch (errorCode) {
         case ServerErrorCode.PARTICIPANT_NAME_NOT_AVAILABLE:
             return t`Participant name already taken`;
+        case ServerErrorCode.EVENT_CODE_AND_YEAR_NOT_AVAILABLE:
+            return t`An event is already created with the JID code and year`;
         case ServerErrorCode.ADMIN_AUTHENTICATION_FAILED:
             return t`Authentication failed`;
         case ServerErrorCode.EMAIL_NOT_AVAILABLE:
