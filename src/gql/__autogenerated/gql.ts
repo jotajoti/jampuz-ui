@@ -20,10 +20,11 @@ const documents = {
     "fragment GetAdminLocationEvents on Location {\n  events {\n    id\n    code {\n      value\n    }\n    year\n    active\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountryCount\n    }\n    participants {\n      id\n    }\n  }\n}": types.GetAdminLocationEventsFragmentDoc,
     "fragment GetAdminLocationOwners on Location {\n  owners {\n    id\n    name\n  }\n}": types.GetAdminLocationOwnersFragmentDoc,
     "fragment GetAdminLocations on Query {\n  locations {\n    id\n    name\n    latestEvent {\n      id\n      year\n    }\n    events {\n      id\n    }\n  }\n}": types.GetAdminLocationsFragmentDoc,
-    "query GetAdminLogin {\n  ...GetFooter\n}": types.GetAdminLoginDocument,
+    "mutation CreateLocation($input: CreateLocationInput!) {\n  createLocation(input: $input) {\n    id\n  }\n}": types.CreateLocationDocument,
+    "query GetAdminLogin {\n  authenticatedAdmin {\n    id\n  }\n  ...GetFooter\n}": types.GetAdminLoginDocument,
     "mutation AuthenticateAdmin($email: String!, $password: String!) {\n  authenticateAdmin(email: $email, password: $password)\n}": types.AuthenticateAdminDocument,
     "query AdminOverview {\n  ...GetAdminLocations\n}": types.AdminOverviewDocument,
-    "query GetAdminRegister {\n  ...GetFooter\n}": types.GetAdminRegisterDocument,
+    "query GetAdminRegister {\n  authenticatedAdmin {\n    id\n  }\n  ...GetFooter\n}": types.GetAdminRegisterDocument,
     "mutation CreateAdmin($input: CreateAdmin!) {\n  createAdmin(input: $input) {\n    id\n  }\n}": types.CreateAdminDocument,
     "fragment GetFooter on Query {\n  serverVersion\n}": types.GetFooterFragmentDoc,
     "subscription EventSubscription($eventId: ID!) {\n  eventUpdated(eventId: $eventId)\n}": types.EventSubscriptionDocument,
@@ -79,7 +80,11 @@ export function graphql(source: "fragment GetAdminLocations on Query {\n  locati
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "query GetAdminLogin {\n  ...GetFooter\n}"): (typeof documents)["query GetAdminLogin {\n  ...GetFooter\n}"];
+export function graphql(source: "mutation CreateLocation($input: CreateLocationInput!) {\n  createLocation(input: $input) {\n    id\n  }\n}"): (typeof documents)["mutation CreateLocation($input: CreateLocationInput!) {\n  createLocation(input: $input) {\n    id\n  }\n}"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "query GetAdminLogin {\n  authenticatedAdmin {\n    id\n  }\n  ...GetFooter\n}"): (typeof documents)["query GetAdminLogin {\n  authenticatedAdmin {\n    id\n  }\n  ...GetFooter\n}"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
@@ -91,7 +96,7 @@ export function graphql(source: "query AdminOverview {\n  ...GetAdminLocations\n
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "query GetAdminRegister {\n  ...GetFooter\n}"): (typeof documents)["query GetAdminRegister {\n  ...GetFooter\n}"];
+export function graphql(source: "query GetAdminRegister {\n  authenticatedAdmin {\n    id\n  }\n  ...GetFooter\n}"): (typeof documents)["query GetAdminRegister {\n  authenticatedAdmin {\n    id\n  }\n  ...GetFooter\n}"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

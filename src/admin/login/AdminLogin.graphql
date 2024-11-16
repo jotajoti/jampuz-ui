@@ -1,3 +1,6 @@
 query GetAdminLogin {
+    authenticatedAdmin {
+        id
+    }
     ...GetFooter
 }

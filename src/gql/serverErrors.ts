@@ -4,6 +4,7 @@ import {t} from "@lingui/macro";
 export enum ServerErrorCode {
     PARTICIPANT_NAME_NOT_AVAILABLE = 1,
     ADMIN_AUTHENTICATION_FAILED = 8,
+    EMAIL_NOT_AVAILABLE = 10,
 }
 
 const serverErrorCodeMap: Record<number, ServerErrorCode> = {};
@@ -35,8 +36,10 @@ export const hasErrorCode = (error: CombinedError | null, errorCode: ServerError
 export const translateErrorCode = (errorCode: ServerErrorCode) => {
     switch (errorCode) {
         case ServerErrorCode.PARTICIPANT_NAME_NOT_AVAILABLE:
-            return t`Participant name already taken`
+            return t`Participant name already taken`;
         case ServerErrorCode.ADMIN_AUTHENTICATION_FAILED:
-            return t`Authentication failed`
+            return t`Authentication failed`;
+        case ServerErrorCode.EMAIL_NOT_AVAILABLE:
+            return t`Email already associated with account`;
     }
 }

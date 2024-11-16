@@ -4,7 +4,7 @@ import {replace} from "react-router-dom";
 export const adminRegisterLoader = async () => {
     const result = await client.query(GetAdminRegisterDocument, {});
 
-    if (localStorage.getItem("token")) {
+    if (result.error || result.data?.authenticatedAdmin) {
         return replace("/admin");
     }
 
