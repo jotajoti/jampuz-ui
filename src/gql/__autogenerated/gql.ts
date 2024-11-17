@@ -21,6 +21,7 @@ const documents = {
     "fragment GetAdminLocationEvents on Location {\n  events {\n    id\n    code {\n      value\n    }\n    year\n    active\n    jidCodeStats {\n      count\n      uniqueCount\n      uniqueCountryCount\n    }\n    participants {\n      id\n    }\n  }\n}": types.GetAdminLocationEventsFragmentDoc,
     "fragment GetAdminLocationOwners on Location {\n  owners {\n    id\n    name\n  }\n}": types.GetAdminLocationOwnersFragmentDoc,
     "fragment GetAdminLocations on Query {\n  locations {\n    id\n    name\n    latestEvent {\n      id\n      year\n    }\n    events {\n      id\n    }\n  }\n}": types.GetAdminLocationsFragmentDoc,
+    "mutation AddOwner($adminEmail: String!, $locationId: ID!) {\n  addOwner(adminEmail: $adminEmail, locationId: $locationId) {\n    id\n  }\n}": types.AddOwnerDocument,
     "mutation CreateLocation($input: CreateLocationInput!) {\n  createLocation(input: $input) {\n    id\n  }\n}": types.CreateLocationDocument,
     "query GetAdminLogin {\n  authenticatedAdmin {\n    id\n  }\n  ...GetFooter\n}": types.GetAdminLoginDocument,
     "mutation AuthenticateAdmin($email: String!, $password: String!) {\n  authenticateAdmin(email: $email, password: $password)\n}": types.AuthenticateAdminDocument,
@@ -82,6 +83,10 @@ export function graphql(source: "fragment GetAdminLocationOwners on Location {\n
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function graphql(source: "fragment GetAdminLocations on Query {\n  locations {\n    id\n    name\n    latestEvent {\n      id\n      year\n    }\n    events {\n      id\n    }\n  }\n}"): (typeof documents)["fragment GetAdminLocations on Query {\n  locations {\n    id\n    name\n    latestEvent {\n      id\n      year\n    }\n    events {\n      id\n    }\n  }\n}"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "mutation AddOwner($adminEmail: String!, $locationId: ID!) {\n  addOwner(adminEmail: $adminEmail, locationId: $locationId) {\n    id\n  }\n}"): (typeof documents)["mutation AddOwner($adminEmail: String!, $locationId: ID!) {\n  addOwner(adminEmail: $adminEmail, locationId: $locationId) {\n    id\n  }\n}"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

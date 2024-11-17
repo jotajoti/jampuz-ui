@@ -1,0 +1,5 @@
+mutation AddOwner($adminEmail: String!, $locationId: ID!) {
+    addOwner(adminEmail: $adminEmail, locationId: $locationId) {
+        id
+    }
+}

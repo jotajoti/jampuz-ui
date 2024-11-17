@@ -93,7 +93,8 @@ type Location {
 }
 
 type Mutation {
-  addOwner(adminId: ID!, locationId: ID!): Location
+  """ Add owner by admin email"""
+  addOwner(adminEmail: String!, locationId: ID!): Location
   authenticateAdmin(email: String!, password: String!): String
   authenticateParticipant(eventId: ID!, name: String!, pinCode: String!): String
   createAdmin(input: CreateAdmin!): Admin

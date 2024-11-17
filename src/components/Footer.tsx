@@ -36,8 +36,7 @@ export const Footer = ({getFooterFragment}: FooterProps) => {
                 <LanguageSelector/>
             </aside>
             <nav className="grid-flow-col gap-4 place-self-center justify-self-end hidden md:block">
-                <Trans>Client version: {uiVersion}</Trans> -
-                <Trans>Server version: {serverVersion}</Trans>
+                <Trans>Client version: {uiVersion}</Trans> - <Trans>Server version: {serverVersion}</Trans>
             </nav>
         </footer>
     )
