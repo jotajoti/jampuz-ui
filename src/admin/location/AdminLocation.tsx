@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import {t, Trans} from "@lingui/macro";
+import {Trans} from "@lingui/macro";
 import {Link, Outlet, useLoaderData} from "react-router-dom";
 import {PlusIcon} from "@heroicons/react/24/solid";
 
@@ -34,11 +34,20 @@ export const AdminLocation = () => {
             }]}/>
 
             <div className="toast mb-14">
-                <div className="tooltip tooltip-left" data-tip={t`Add event`}>
-                    <Link to={`/admin/locations/${loaderData.location?.id}/events/new`}
-                          className="btn btn-primary btn-circle">
+                <div className="dropdown dropdown-top dropdown-end">
+                    <label tabIndex={0} className="btn btn-primary btn-circle">
                         <PlusIcon className="size-7"/>
-                    </Link>
+                    </label>
+                    <div tabIndex={0} className="dropdown-content my-2 gap-2 flex flex-col">
+                        <Link to={`/admin/locations/${loaderData.location?.id}/events/new`}
+                              className="btn btn-secondary text-secondary-content">
+                            <Trans>Add event</Trans>
+                        </Link>
+                        <Link to={`/admin/locations/${loaderData.location?.id}/events/addowner`}
+                              className="btn btn-secondary text-secondary-content">
+                            <Trans>Add owner</Trans>
+                        </Link>
+                    </div>
                 </div>
             </div>
 

@@ -6,6 +6,7 @@ export enum ServerErrorCode {
     EVENT_CODE_AND_YEAR_NOT_AVAILABLE = 7,
     ADMIN_AUTHENTICATION_FAILED = 8,
     EMAIL_NOT_AVAILABLE = 10,
+    ADMIN_NOT_FOUND = 11,
 }
 
 const serverErrorCodeMap: Record<number, ServerErrorCode> = {};
@@ -44,5 +45,7 @@ export const translateErrorCode = (errorCode: ServerErrorCode) => {
             return t`Authentication failed`;
         case ServerErrorCode.EMAIL_NOT_AVAILABLE:
             return t`Email already associated with account`;
+        case ServerErrorCode.ADMIN_NOT_FOUND:
+            return t`No admin found with the specified email`;
     }
 }

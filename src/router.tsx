@@ -4,6 +4,8 @@ import {Event, eventLoader, eventLogoutLoader, JoinEvent, joinEventAction, joinE
 import {ErrorPage} from "./ErrorPage.tsx";
 import {Landing, landingLoader} from "./landing";
 import {
+    AddOwner,
+    addOwnerAction,
     Admin,
     AdminCreateLocation,
     adminCreateLocationAction,
@@ -63,6 +65,10 @@ export const router = createBrowserRouter([{
         element: <AdminLocation/>,
         loader: adminLocationLoader,
         children: [{
+            path: "events/addowner",
+            element: <AddOwner/>,
+            action: addOwnerAction,
+        }, {
             path: "events/new",
             element: <AdminCreateEvent/>,
             action: adminCreateEventAction,
