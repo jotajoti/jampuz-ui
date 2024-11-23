@@ -1,4 +1,5 @@
-import {ActionFunctionArgs, replace} from "react-router-dom";
+import {ActionFunctionArgs, replace} from "react-router";
+
 import {AddOwnerDocument, client, hasErrorCode, ServerErrorCode} from "../../../gql";
 import {badRequest} from "../../../utils/responses.ts";
 

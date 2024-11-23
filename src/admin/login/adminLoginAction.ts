@@ -1,4 +1,5 @@
-import {ActionFunctionArgs, redirect} from "react-router-dom";
+import {ActionFunctionArgs, redirect} from "react-router";
+
 import {AuthenticateAdminDocument, client, extractErrorCodes} from "../../gql";
 
 export const adminLoginAction = async ({request}: ActionFunctionArgs) => {

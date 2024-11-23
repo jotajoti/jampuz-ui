@@ -1,13 +1,13 @@
-import {Form, Link, useActionData, useLoaderData} from "react-router-dom";
+import {ReactNode} from "react";
+import {Form, Link, useActionData, useLoaderData} from "react-router";
 import {t, Trans} from "@lingui/macro";
+import {XCircleIcon} from "@heroicons/react/24/outline";
 import {EnvelopeIcon, KeyIcon, UserCircleIcon} from "@heroicons/react/16/solid";
 
 import {DefaultNavTitle} from "../../components/DefaultNavTitle.tsx";
 import {Layout} from "../../Layout.tsx";
 import {GetAdminRegisterQuery, translateErrorCode} from "../../gql";
 import {RegisterResult} from "./adminRegisterAction.ts";
-import {ReactNode} from "react";
-import {XCircleIcon} from "@heroicons/react/24/outline";
 
 const RegisterForm = () => {
     return (

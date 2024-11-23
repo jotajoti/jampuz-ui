@@ -1,5 +1,5 @@
 import {Dispatch, ReactNode, SetStateAction} from "react";
-import {useOutletContext} from "react-router-dom";
+import {useOutletContext} from "react-router";
 
 export type AdminContext = {
     setNavigationCenter: Dispatch<SetStateAction<ReactNode | null>>

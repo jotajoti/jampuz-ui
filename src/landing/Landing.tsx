@@ -1,4 +1,4 @@
-import {Link, useLoaderData} from "react-router-dom";
+import {Link, useLoaderData} from "react-router";
 import {Trans} from "@lingui/macro";
 
 import {Layout} from "../Layout";

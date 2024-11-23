@@ -1,5 +1,6 @@
+import {redirect} from "react-router";
+
 import {AdminOverviewDocument, client} from "../../gql";
-import {redirect} from "react-router-dom";
 
 export const adminOverviewLoader = async () => {
     const result = await client.query(AdminOverviewDocument, {});

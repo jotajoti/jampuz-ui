@@ -1,5 +1,5 @@
 import {ReactNode, useState} from "react";
-import {Link, Outlet, useLoaderData} from "react-router-dom";
+import {Link, Outlet, useLoaderData} from "react-router";
 
 import {Layout} from "../Layout.tsx";
 import {DefaultNavTitle} from "../components/DefaultNavTitle.tsx";

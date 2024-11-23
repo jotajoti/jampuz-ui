@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import {Link, Outlet, useLoaderData} from "react-router-dom";
+import {Link, Outlet, useLoaderData} from "react-router";
 import {t, Trans} from "@lingui/macro";
 import {PlusIcon} from "@heroicons/react/24/solid";
 

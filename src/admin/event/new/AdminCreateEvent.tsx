@@ -1,10 +1,11 @@
-import {RouterDialog, RouterDialogAction} from "../../../components/RouterDialog.tsx";
+import {useState} from "react";
 import {t, Trans} from "@lingui/macro";
-import {useActionData} from "react-router-dom";
+import {useActionData} from "react-router";
+
+import {RouterDialog, RouterDialogAction} from "../../../components/RouterDialog.tsx";
 import {OptionalErrorResponseBody} from "../../../utils/responses.ts";
 import {translateErrorCode} from "../../../gql";
 import {JidCodeInput} from "../../../components/JidCodeInput.tsx";
-import {useState} from "react";
 
 export const AdminCreateEvent = () => {
     const [jidCode, setJidCode] = useState<string>("");

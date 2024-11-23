@@ -1,4 +1,5 @@
-import {replace} from "react-router-dom";
+import {replace} from "react-router";
+
 import {client, GetAdminLoginDocument} from "../../gql";
 
 export const adminLoginLoader = async () => {

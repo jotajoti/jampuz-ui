@@ -1,4 +1,5 @@
-import {LoaderFunctionArgs, redirect} from "react-router-dom";
+import {LoaderFunctionArgs, redirect} from "react-router";
+
 import {client, GetAdminLocationDocument} from "../../gql";
 
 export const adminLocationLoader = async ({params}: LoaderFunctionArgs) => {

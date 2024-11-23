@@ -1,4 +1,4 @@
-import {ActionFunctionArgs, replace} from "react-router-dom";
+import {ActionFunctionArgs, replace} from "react-router";
 
 import {
     AuthenticateParticipantDocument,

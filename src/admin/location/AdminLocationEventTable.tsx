@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link} from "react-router";
 import {RocketLaunchIcon, StopIcon} from "@heroicons/react/16/solid";
 import {i18n} from "@lingui/core";
 import {t, Trans} from "@lingui/macro";

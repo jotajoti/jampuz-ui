@@ -1,4 +1,4 @@
-import {Link, useLoaderData} from "react-router-dom";
+import {Link, useLoaderData} from "react-router";
 import {GetAdminEventQuery} from "../../gql";
 import {useAdminContext} from "../adminContext.ts";
 import {useEffect} from "react";

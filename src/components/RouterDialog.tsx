@@ -1,5 +1,5 @@
 import {ReactNode, SyntheticEvent, useCallback, useEffect} from "react";
-import {Form, useSubmit} from "react-router-dom";
+import {Form, useSubmit} from "react-router";
 
 export type RouterDialogActionCallback = {
     cancel: () => void
