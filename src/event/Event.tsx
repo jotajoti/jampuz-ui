@@ -1,4 +1,4 @@
-import {Link, Outlet, useLoaderData, useRevalidator} from "react-router-dom";
+import {Link, Outlet, useLoaderData, useRevalidator} from "react-router";
 import {useSubscription} from "urql";
 import {Trans} from "@lingui/macro";
 

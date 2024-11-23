@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link} from "react-router";
 import {Trans} from "@lingui/macro";
 
 import {numberSort, stringSort, Table, TableDef} from "../../components/table";

@@ -1,4 +1,4 @@
-import {replace} from "react-router-dom";
+import {replace} from "react-router";
 
 export const adminLogoutLoader = async () => {
     localStorage.removeItem("token");

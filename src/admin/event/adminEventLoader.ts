@@ -1,4 +1,5 @@
-import {ActionFunctionArgs, redirect} from "react-router-dom";
+import {ActionFunctionArgs, redirect} from "react-router";
+
 import {client, GetAdminEventDocument} from "../../gql";
 
 export const adminEventLoader = async ({params}: ActionFunctionArgs) => {

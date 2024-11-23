@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import {Link} from "react-router-dom";
+import {Link} from "react-router";
 import {Trans} from "@lingui/macro";
 import {UserIcon} from "@heroicons/react/24/solid";
 

@@ -1,4 +1,5 @@
-import {ActionFunctionArgs, replace} from "react-router-dom";
+import {ActionFunctionArgs, replace} from "react-router";
+
 import {client, CreateLocationDocument} from "../../../gql";
 
 export const adminCreateLocationAction = async ({request}: ActionFunctionArgs) => {

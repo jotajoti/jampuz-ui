@@ -1,4 +1,4 @@
-import {createBrowserRouter, redirect} from "react-router-dom";
+import {createBrowserRouter, redirect} from "react-router";
 
 import {Event, eventLoader, eventLogoutLoader, JoinEvent, joinEventAction, joinEventLoader} from "./event";
 import {ErrorPage} from "./ErrorPage.tsx";

@@ -1,7 +1,7 @@
 import {t, Trans} from "@lingui/macro";
+import {useActionData} from "react-router";
 
 import {RouterDialog, RouterDialogAction} from "../../../components/RouterDialog.tsx";
-import {useActionData} from "react-router-dom";
 import {OptionalErrorResponseBody} from "../../../utils/responses.ts";
 import {translateErrorCode} from "../../../gql";
 

@@ -1,4 +1,4 @@
-import {useActionData, useLoaderData} from "react-router-dom";
+import {useActionData, useLoaderData} from "react-router";
 import {t, Trans} from "@lingui/macro";
 
 import {GetEventDetailsQuery, translateErrorCode} from "../../gql";

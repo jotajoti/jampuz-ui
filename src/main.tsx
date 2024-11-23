@@ -1,6 +1,6 @@
 import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
-import {RouterProvider} from "react-router-dom";
+import {RouterProvider} from "react-router/dom";
 import {Provider} from "urql";
 
 import {router} from "./router.tsx";

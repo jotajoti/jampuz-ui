@@ -1,4 +1,5 @@
-import {ActionFunctionArgs, json} from "react-router-dom";
+import {ActionFunctionArgs} from "react-router";
+
 import {client, CreateAdminDocument, extractErrorCodes, ServerErrorCode} from "../../gql";
 
 export type RegisterSuccess = {
@@ -28,7 +29,7 @@ export const adminRegisterAction = async ({request}: ActionFunctionArgs) => {
     });
 
     if (result.error) {
-        return json({
+        return Response.json({
             result: "failure",
             serverErrorCodes: extractErrorCodes(result.error),
         }, {
@@ -36,7 +37,7 @@ export const adminRegisterAction = async ({request}: ActionFunctionArgs) => {
         })
     }
 
-    return json({
+    return Response.json({
         result: "success",
     });
 }

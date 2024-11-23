@@ -1,4 +1,4 @@
-import {ActionFunctionArgs, replace} from "react-router-dom";
+import {ActionFunctionArgs, replace} from "react-router";
 import {client, CreateEventDocument, hasErrorCode, ServerErrorCode} from "../../../gql";
 import {badRequest} from "../../../utils/responses.ts";
 

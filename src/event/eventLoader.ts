@@ -1,4 +1,5 @@
-import {LoaderFunctionArgs, redirect} from "react-router-dom";
+import {LoaderFunctionArgs, redirect} from "react-router";
+
 import {client, GetEventDocument} from "../gql";
 
 export const eventLoader = async ({params}: LoaderFunctionArgs) => {
