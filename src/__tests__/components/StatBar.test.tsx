@@ -23,6 +23,6 @@ describe("StatBar", () => {
         await expect.element(screen.getByTestId("statbar-0-value")).toHaveTextContent("42");
 
         await expect.element(screen.getByTestId("statbar-1-title")).toHaveTextContent("Stat 2");
-        await expect.element(screen.getByTestId("statbar-1-value")).toHaveTextContent("Forty Two");
+        await expect.element(screen.getByTestId("statbar-1-value")).toHaveTextContent("Forty Two 2");
     });
 });
