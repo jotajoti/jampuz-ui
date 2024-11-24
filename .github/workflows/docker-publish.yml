@@ -67,6 +67,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Test project
+        run: npm run test
+
       # Build and push Docker image with Buildx (don't push on PR)
       - name: Build and push Docker image
         id: build-and-push

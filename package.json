@@ -13,7 +13,8 @@
     "messages:sync": "lingui extract --overwrite --clean && lingui compile --typescript",
     "preview": "vite preview --host",
     "test": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "test:browser": "vitest --workspace=vitest.workspace.ts"
   },
   "dependencies": {
     "@graphql-codegen/cli": "^5.0.3",
@@ -38,6 +39,7 @@
     "@eslint/js": "^9.11.1",
     "@lingui/cli": "^4.13.0",
     "@lingui/vite-plugin": "^4.13.0",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",

@@ -29,9 +29,11 @@ jobs:
           TRANSLATION_IO_API_KEY: ${{ secrets.TRANSLATION_IO_API_KEY }}
         run: npm run messages:sync
 
-      # Should be tests once we have them
-      - name: Run build to ensure everything still works
+      - name: Build
         run: npm run build
+
+      - name: Run build to ensure everything still works
+        run: npm run test
 
       - name: Configure Git user
         run: |
