@@ -11,7 +11,7 @@ import {I18nApp} from "./i18n";
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <Provider value={client}>
+        <Provider value={client()}>
             <I18nApp>
                 <RouterProvider router={router}/>
             </I18nApp>

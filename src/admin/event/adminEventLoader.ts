@@ -4,7 +4,7 @@ import {client, GetAdminEventDocument} from "../../gql";
 
 export const adminEventLoader = async ({params}: ActionFunctionArgs) => {
 
-    const result = await client
+    const result = await client()
         .query(GetAdminEventDocument, {
             eventId: params.eventId as string,
         });

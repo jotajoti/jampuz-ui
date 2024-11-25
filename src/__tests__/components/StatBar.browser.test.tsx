@@ -3,7 +3,6 @@ import {render} from "vitest-browser-react";
 
 import {StatBar, StatBarConfig} from "../../components/StatBar.tsx";
 
-
 describe("StatBar", () => {
     it("renders", async () => {
 

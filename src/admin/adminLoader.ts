@@ -2,7 +2,7 @@ import {AdminDocument, client} from "../gql";
 import {replace} from "react-router";
 
 export const adminLoader = async () => {
-    const result = await client.query(AdminDocument, {}, {
+    const result = await client().query(AdminDocument, {}, {
         requestPolicy: 'network-only',
     });
 

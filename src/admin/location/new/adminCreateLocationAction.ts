@@ -8,7 +8,7 @@ export const adminCreateLocationAction = async ({request}: ActionFunctionArgs) =
     if (formData.has("createButton") && formData.get("locationName")) {
         const locationName = formData.get("locationName") as string;
 
-        const result = await client.mutation(CreateLocationDocument, {
+        const result = await client().mutation(CreateLocationDocument, {
             input: {
                 name: locationName,
             }
