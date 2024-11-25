@@ -4,7 +4,7 @@ import {client, GetAdminLocationDocument} from "../../gql";
 
 export const adminLocationLoader = async ({params}: LoaderFunctionArgs) => {
 
-    const result = await client.query(GetAdminLocationDocument, {
+    const result = await client().query(GetAdminLocationDocument, {
         locationId: params.locationId as string,
     });
 

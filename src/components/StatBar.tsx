@@ -18,8 +18,8 @@ export const StatBar = ({config}: StatBarProps) => {
         <div className="stats bg-neutral rounded-none text-sm mb-2">
             {config.stats.map((stat, index) => (
                 <div key={index} className="stat flex flex-row justify-center">
-                    <div className="stat-title text-neutral-content">{stat.title}</div>
-                    <div className="stat-value text-accent text-sm">{stat.value}</div>
+                    <div className="stat-title text-neutral-content" data-testid={`statbar-${index}-title`}>{stat.title}</div>
+                    <div className="stat-value text-accent text-sm" data-testid={`statbar-${index}-value`}>{stat.value}</div>
                 </div>
             ))}
         </div>

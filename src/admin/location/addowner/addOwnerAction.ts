@@ -10,7 +10,7 @@ export const addOwnerAction = async ({params, request}: ActionFunctionArgs) => {
     if (formData.has("addButton") && formData.get("email")) {
         const adminEmail = formData.get("email") as string;
 
-        const result = await client.mutation(AddOwnerDocument, {
+        const result = await client().mutation(AddOwnerDocument, {
             locationId,
             adminEmail,
         });

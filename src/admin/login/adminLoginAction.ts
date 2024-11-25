@@ -7,7 +7,7 @@ export const adminLoginAction = async ({request}: ActionFunctionArgs) => {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
-    const result = await client
+    const result = await client()
         .mutation(AuthenticateAdminDocument, {
             email,
             password

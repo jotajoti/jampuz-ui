@@ -17,7 +17,7 @@ export const joinEventAction = async ({params, request}: ActionFunctionArgs) => 
         const eventId = formData.get("eventId") as string;
         const name = formData.get("name") as string;
 
-        const result = await client.mutation(CreateParticipantDocument, {
+        const result = await client().mutation(CreateParticipantDocument, {
             input: {
                 eventId,
                 name,
@@ -31,7 +31,7 @@ export const joinEventAction = async ({params, request}: ActionFunctionArgs) => 
                 return badRequest({error: result.error.message});
             }
         } else {
-            const authenticateResult = await client.mutation(AuthenticateParticipantDocument, {
+            const authenticateResult = await client().mutation(AuthenticateParticipantDocument, {
                 eventId,
                 name,
                 pinCode: result.data!.createParticipant!.pinCode!,

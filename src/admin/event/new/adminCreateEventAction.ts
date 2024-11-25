@@ -10,7 +10,7 @@ export const adminCreateEventAction = async ({params, request}: ActionFunctionAr
         const code = formData.get("code") as string;
         const year = +(formData.get("year") as string);
 
-        const result = await client.mutation(CreateEventDocument, {
+        const result = await client().mutation(CreateEventDocument, {
             input: {
                 locationId,
                 code,

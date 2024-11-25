@@ -20,6 +20,8 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v4
+        with:
+          node-version: ">=20.0.0"
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
@@ -29,9 +31,14 @@ jobs:
           TRANSLATION_IO_API_KEY: ${{ secrets.TRANSLATION_IO_API_KEY }}
         run: npm run messages:sync
 
-      # Should be tests once we have them
-      - name: Run build to ensure everything still works
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Build
         run: npm run build
+
+      - name: Run build to ensure everything still works
+        run: npm run test
 
       - name: Configure Git user
         run: |

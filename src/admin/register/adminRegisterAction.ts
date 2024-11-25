@@ -20,7 +20,7 @@ export const adminRegisterAction = async ({request}: ActionFunctionArgs) => {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
-    const result = await client.mutation(CreateAdminDocument, {
+    const result = await client().mutation(CreateAdminDocument, {
         input: {
             name,
             email,

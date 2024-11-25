@@ -6,11 +6,15 @@
   "scripts": {
     "codegen": "graphql-codegen",
     "codegenw": "graphql-codegen --watch",
+    "coverage": "vitest run --coverage",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "messages:sync": "lingui extract --overwrite --clean && lingui compile --typescript",
-    "preview": "vite preview --host"
+    "preview": "vite preview --host",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:browser": "vitest --workspace=vitest.workspace.ts"
   },
   "dependencies": {
     "@graphql-codegen/cli": "^5.0.3",
@@ -35,9 +39,14 @@
     "@eslint/js": "^9.11.1",
     "@lingui/cli": "^4.13.0",
     "@lingui/vite-plugin": "^4.13.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.2",
+    "@vitest/browser": "^2.1.5",
+    "@vitest/coverage-v8": "^2.1.5",
+    "@vitest/ui": "^2.1.5",
     "autoprefixer": "^10.4.20",
     "babel-plugin-macros": "^3.1.0",
     "daisyui": "^4.12.13",
@@ -45,10 +54,15 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.12",
     "globals": "^15.9.0",
+    "msw": "^2.6.6",
+    "playwright": "^1.49.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.7.0",
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "vitest": "^2.1.5",
+    "vitest-browser-react": "^0.0.3",
+    "vitest-localstorage-mock": "^0.1.2"
   }
 }
