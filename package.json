@@ -19,9 +19,9 @@
   "dependencies": {
     "@graphql-codegen/cli": "^5.0.3",
     "@heroicons/react": "^2.1.5",
-    "@lingui/detect-locale": "^4.14.0",
-    "@lingui/macro": "^4.13.0",
-    "@lingui/react": "^4.13.0",
+    "@lingui/detect-locale": "^5.0.0",
+    "@lingui/macro": "^5.0.0",
+    "@lingui/react": "^5.0.0",
     "@maskito/core": "^3.2.0",
     "@maskito/react": "^3.2.0",
     "@parcel/watcher": "^2.4.1",
@@ -37,8 +37,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
-    "@lingui/cli": "^4.13.0",
-    "@lingui/vite-plugin": "^4.13.0",
+    "@lingui/cli": "^5.0.0",
+    "@lingui/vite-plugin": "^5.0.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@types/react": "^18.3.10",
