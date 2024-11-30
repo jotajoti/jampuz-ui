@@ -15,27 +15,31 @@ msgstr ""
 
 #. Event title
 #. Event title
-#: src/admin/event/AdminEvent.tsx:18
 #: src/event/Event.tsx:41
+#: src/admin/event/AdminEvent.tsx:19
 msgid "{locationName} {eventYear}"
 msgstr "{locationName} {eventYear}"
 
-#: src/admin/location/AdminLocationEventTable.tsx:60
+#: src/admin/location/AdminLocationEventTable.tsx:62
 msgid "# JID codes"
 msgstr "# JID codes"
 
-#: src/admin/location/AdminLocationEventTable.tsx:37
-#: src/admin/location/AdminLocationEventTable.tsx:41
-#: src/admin/location/AdminLocationEventTable.tsx:42
+#: src/admin/location/AdminLocationEventTable.tsx:39
+#: src/admin/location/AdminLocationEventTable.tsx:43
+#: src/admin/location/AdminLocationEventTable.tsx:44
 msgid "Active"
 msgstr "Active"
+
+#: src/admin/location/addowner/AddOwner.tsx:21
+msgid "Add"
+msgstr "Add"
 
 #: src/components/JidCodeInput.tsx:72
 msgid "Add Code"
 msgstr "Add Code"
 
-#: src/admin/event/new/AdminCreateEvent.tsx:30
-#: src/admin/location/AdminLocation.tsx:37
+#: src/admin/location/AdminLocation.tsx:44
+#: src/admin/event/new/AdminCreateEvent.tsx:32
 msgid "Add event"
 msgstr "Add event"
 
@@ -44,15 +48,24 @@ msgstr "Add event"
 msgid "Add JID Code"
 msgstr "Add JID Code"
 
-#: src/admin/location/new/AdminCreateLocation.tsx:27
-#: src/admin/overview/AdminOverview.tsx:30
+#: src/admin/overview/AdminOverview.tsx:31
+#: src/admin/location/new/AdminCreateLocation.tsx:28
 msgid "Add location"
 msgstr "Add location"
 
-#: src/event/AuthenticatedButtons.tsx:21
+#: src/admin/location/AdminLocation.tsx:48
+#: src/admin/location/addowner/AddOwner.tsx:28
+msgid "Add owner"
+msgstr "Add owner"
+
 #: src/landing/Landing.tsx:15
+#: src/event/AuthenticatedButtons.tsx:21
 msgid "Admin"
 msgstr "Admin"
+
+#: src/admin/location/addowner/AddOwner.tsx:31
+msgid "Admin email"
+msgstr "Admin email"
 
 #: src/utils/countries.tsx:11
 msgid "Afghanistan"
@@ -70,7 +83,7 @@ msgstr "Albania"
 msgid "Algeria"
 msgstr "Algeria"
 
-#: src/admin/register/AdminRegister.tsx:44
+#: src/admin/register/AdminRegister.tsx:45
 msgid "Already have an account? <0>Login</0>"
 msgstr "Already have an account? <0>Login</0>"
 
@@ -78,7 +91,7 @@ msgstr "Already have an account? <0>Login</0>"
 msgid "American Samoa"
 msgstr "American Samoa"
 
-#: src/gql/serverErrors.ts:42
+#: src/gql/serverErrors.ts:43
 msgid "An event is already created with the JID code and year"
 msgstr "An event is already created with the JID code and year"
 
@@ -118,11 +131,11 @@ msgstr "Australia"
 msgid "Austria"
 msgstr "Austria"
 
-#: src/gql/serverErrors.ts:44
+#: src/gql/serverErrors.ts:45
 msgid "Authentication failed"
 msgstr "Authentication failed"
 
-#: src/components/LanguageSelector.tsx:32
+#: src/components/LanguageSelector.tsx:33
 msgid "Auto"
 msgstr "Auto"
 
@@ -226,10 +239,11 @@ msgstr "Canada"
 msgid "Canary Islands"
 msgstr "Canary Islands"
 
-#: src/admin/event/new/AdminCreateEvent.tsx:19
-#: src/admin/location/new/AdminCreateLocation.tsx:16
 #: src/event/AddJidCode.tsx:55
-#: src/event/join/JoinEvent.tsx:20
+#: src/event/join/JoinEvent.tsx:21
+#: src/admin/location/new/AdminCreateLocation.tsx:17
+#: src/admin/location/addowner/AddOwner.tsx:17
+#: src/admin/event/new/AdminCreateEvent.tsx:21
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -305,22 +319,22 @@ msgstr "Costa Rica"
 msgid "Côte d’Ivoire"
 msgstr "Côte d’Ivoire"
 
-#: src/event/countries/CountriesTable.tsx:27
+#: src/event/countries/CountriesTable.tsx:28
 msgid "Count"
 msgstr "Count"
 
 #: src/event/Event.tsx:68
-#: src/event/participants/ParticipantsTable.tsx:36
-#: src/event/statbar/EventStatBar.tsx:22
+#: src/event/statbar/EventStatBar.tsx:23
+#: src/event/participants/ParticipantsTable.tsx:37
 msgid "Countries"
 msgstr "Countries"
 
-#: src/event/countries/CountriesTable.tsx:20
+#: src/event/countries/CountriesTable.tsx:21
 msgid "Country"
 msgstr "Country"
 
-#: src/admin/event/new/AdminCreateEvent.tsx:23
-#: src/admin/location/new/AdminCreateLocation.tsx:20
+#: src/admin/location/new/AdminCreateLocation.tsx:21
+#: src/admin/event/new/AdminCreateEvent.tsx:25
 msgid "Create"
 msgstr "Create"
 
@@ -368,7 +382,7 @@ msgstr "Dominica"
 msgid "Dominican Republic"
 msgstr "Dominican Republic"
 
-#: src/admin/login/AdminLogin.tsx:51
+#: src/admin/login/AdminLogin.tsx:52
 msgid "Don't have an account? <0>Register</0>"
 msgstr "Don't have an account? <0>Register</0>"
 
@@ -384,12 +398,12 @@ msgstr "Egypt"
 msgid "El Salvador"
 msgstr "El Salvador"
 
-#: src/admin/login/AdminLogin.tsx:37
-#: src/admin/register/AdminRegister.tsx:29
+#: src/admin/register/AdminRegister.tsx:30
+#: src/admin/login/AdminLogin.tsx:38
 msgid "Email"
 msgstr "Email"
 
-#: src/gql/serverErrors.ts:46
+#: src/gql/serverErrors.ts:47
 msgid "Email already associated with account"
 msgstr "Email already associated with account"
 
@@ -477,7 +491,7 @@ msgstr "Ghana"
 msgid "Gibraltar"
 msgstr "Gibraltar"
 
-#: src/admin/event/AdminEvent.tsx:23
+#: src/admin/event/AdminEvent.tsx:24
 msgid "Go to event"
 msgstr "Go to event"
 
@@ -585,22 +599,22 @@ msgstr "Japan"
 msgid "Jersey"
 msgstr "Jersey"
 
-#: src/admin/location/AdminLocationEventTable.tsx:31
+#: src/admin/location/AdminLocationEventTable.tsx:33
 msgid "JID code"
 msgstr "JID code"
 
-#: src/event/participants/ParticipantsTable.tsx:29
-#: src/event/statbar/EventStatBar.tsx:19
+#: src/event/statbar/EventStatBar.tsx:20
+#: src/event/participants/ParticipantsTable.tsx:30
 msgid "JID Codes"
 msgstr "JID Codes"
 
 #: src/event/Event.tsx:31
-#: src/event/join/JoinEvent.tsx:24
+#: src/event/join/JoinEvent.tsx:25
 msgid "Join"
 msgstr "Join"
 
 #. Join modal title
-#: src/event/join/JoinEvent.tsx:31
+#: src/event/join/JoinEvent.tsx:32
 msgid "Join {locationName} {eventYear}"
 msgstr "Join {locationName} {eventYear}"
 
@@ -632,7 +646,7 @@ msgstr "Kuwait"
 msgid "Kyrgyzstan"
 msgstr "Kyrgyzstan"
 
-#: src/components/LanguageSelector.tsx:22
+#: src/components/LanguageSelector.tsx:23
 msgid "Language"
 msgstr "Language"
 
@@ -672,21 +686,21 @@ msgstr "Liechtenstein"
 msgid "Lithuania"
 msgstr "Lithuania"
 
-#: src/admin/event/new/AdminCreateEvent.tsx:41
-#: src/admin/location/new/AdminCreateLocation.tsx:30
+#: src/admin/location/new/AdminCreateLocation.tsx:31
+#: src/admin/event/new/AdminCreateEvent.tsx:43
 msgid "Location name"
 msgstr "Location name"
 
-#: src/admin/overview/AdminOverview.tsx:25
+#: src/admin/overview/AdminOverview.tsx:26
 msgid "Locations"
 msgstr "Locations"
 
-#: src/admin/login/AdminLogin.tsx:48
+#: src/admin/login/AdminLogin.tsx:49
 msgid "Login"
 msgstr "Login"
 
-#: src/admin/Admin.tsx:46
 #: src/event/AuthenticatedButtons.tsx:28
+#: src/admin/Admin.tsx:46
 msgid "Logout"
 msgstr "Logout"
 
@@ -786,11 +800,11 @@ msgstr "Mozambique"
 msgid "Myanmar (Burma)"
 msgstr "Myanmar (Burma)"
 
-#: src/admin/location/AdminLocationOwnerTable.tsx:20
+#: src/event/participants/ParticipantsTable.tsx:23
+#: src/event/join/JoinEvent.tsx:40
+#: src/admin/register/AdminRegister.tsx:22
 #: src/admin/location/AdminLocationTable.tsx:21
-#: src/admin/register/AdminRegister.tsx:21
-#: src/event/join/JoinEvent.tsx:39
-#: src/event/participants/ParticipantsTable.tsx:22
+#: src/admin/location/AdminLocationOwnerTable.tsx:20
 msgid "Name"
 msgstr "Name"
 
@@ -834,6 +848,10 @@ msgstr "Nigeria"
 msgid "Niue"
 msgstr "Niue"
 
+#: src/gql/serverErrors.ts:49
+msgid "No admin found with the specified email"
+msgstr "No admin found with the specified email"
+
 #: src/utils/countries.tsx:331
 msgid "Norfolk Island"
 msgstr "Norfolk Island"
@@ -854,8 +872,8 @@ msgstr "Northern Mariana Islands"
 msgid "Norway"
 msgstr "Norway"
 
-#: src/admin/location/AdminLocationEventTable.tsx:45
-#: src/admin/location/AdminLocationEventTable.tsx:46
+#: src/admin/location/AdminLocationEventTable.tsx:47
+#: src/admin/location/AdminLocationEventTable.tsx:48
 msgid "Not active"
 msgstr "Not active"
 
@@ -891,18 +909,18 @@ msgstr "Papua New Guinea"
 msgid "Paraguay"
 msgstr "Paraguay"
 
-#: src/gql/serverErrors.ts:40
+#: src/gql/serverErrors.ts:41
 msgid "Participant name already taken"
 msgstr "Participant name already taken"
 
-#: src/admin/location/AdminLocationEventTable.tsx:54
 #: src/event/Event.tsx:60
-#: src/event/statbar/EventStatBar.tsx:16
+#: src/event/statbar/EventStatBar.tsx:17
+#: src/admin/location/AdminLocationEventTable.tsx:56
 msgid "Participants"
 msgstr "Participants"
 
-#: src/admin/login/AdminLogin.tsx:45
-#: src/admin/register/AdminRegister.tsx:37
+#: src/admin/register/AdminRegister.tsx:38
+#: src/admin/login/AdminLogin.tsx:46
 msgid "Password"
 msgstr "Password"
 
@@ -938,7 +956,7 @@ msgstr "Puerto Rico"
 msgid "Qatar"
 msgstr "Qatar"
 
-#: src/admin/register/AdminRegister.tsx:40
+#: src/admin/register/AdminRegister.tsx:41
 msgid "Register"
 msgstr "Register"
 
@@ -990,7 +1008,7 @@ msgstr "Serbia"
 msgid "Serbia and Montenegro"
 msgstr "Serbia and Montenegro"
 
-#: src/components/Footer.tsx:40
+#: src/components/Footer.tsx:39
 msgid "Server version: {serverVersion}"
 msgstr "Server version: {serverVersion}"
 
@@ -1218,11 +1236,11 @@ msgstr "Wallis & Futuna"
 msgid "Western Sahara"
 msgstr "Western Sahara"
 
-#: src/event/join/JoinEvent.tsx:36
+#: src/event/join/JoinEvent.tsx:37
 msgid "What is your name?"
 msgstr "What is your name?"
 
-#: src/admin/location/AdminLocationEventTable.tsx:23
+#: src/admin/location/AdminLocationEventTable.tsx:25
 msgid "Year"
 msgstr "Year"
 
@@ -1230,7 +1248,7 @@ msgstr "Year"
 msgid "Yemen"
 msgstr "Yemen"
 
-#: src/admin/register/AdminRegister.tsx:60
+#: src/admin/register/AdminRegister.tsx:61
 msgid "You have created an account successfully. Go to <0>Login</0>"
 msgstr "You have created an account successfully. Go to <0>Login</0>"
 

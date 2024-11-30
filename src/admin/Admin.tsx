@@ -1,13 +1,13 @@
 import {ReactNode, useState} from "react";
 import {Link, Outlet, useLoaderData} from "react-router";
+import {UserIcon} from "@heroicons/react/24/solid";
+import {Trans} from "@lingui/react/macro";
+import {ArrowRightStartOnRectangleIcon, UserCircleIcon} from "@heroicons/react/24/outline";
 
 import {Layout} from "../Layout.tsx";
 import {DefaultNavTitle} from "../components/DefaultNavTitle.tsx";
 import {AdminContext} from "./adminContext.ts";
 import {AdminQuery} from "../gql";
-import {UserIcon} from "@heroicons/react/24/solid";
-import {Trans} from "@lingui/macro";
-import {ArrowRightStartOnRectangleIcon, UserCircleIcon} from "@heroicons/react/24/outline";
 
 export const Admin = () => {
     const [navigationCenter, setNavigationCenter] = useState<ReactNode | null>(null);

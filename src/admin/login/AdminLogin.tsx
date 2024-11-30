@@ -1,5 +1,6 @@
 import {Form, Link, useActionData, useLoaderData} from "react-router";
-import {t, Trans} from "@lingui/macro";
+import {t} from "@lingui/core/macro";
+import {Trans} from "@lingui/react/macro";
 import {EnvelopeIcon, KeyIcon} from "@heroicons/react/16/solid";
 import {XCircleIcon} from "@heroicons/react/24/outline";
 

@@ -1,6 +1,6 @@
 import {ReactNode} from "react";
 import {Link} from "react-router";
-import {Trans} from "@lingui/macro";
+import {Trans} from "@lingui/react/macro";
 import {UserIcon} from "@heroicons/react/24/solid";
 
 import {AddJidCodeButton} from "./AddJidCode.tsx";

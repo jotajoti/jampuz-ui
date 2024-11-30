@@ -1,5 +1,5 @@
 import {Link, useLoaderData} from "react-router";
-import {Trans} from "@lingui/macro";
+import {Trans} from "@lingui/react/macro";
 
 import {Layout} from "../Layout";
 import {DefaultNavTitle} from "../components/DefaultNavTitle.tsx";

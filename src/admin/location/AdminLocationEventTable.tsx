@@ -1,7 +1,8 @@
 import {Link} from "react-router";
 import {RocketLaunchIcon, StopIcon} from "@heroicons/react/16/solid";
 import {i18n} from "@lingui/core";
-import {t, Trans} from "@lingui/macro";
+import {t} from "@lingui/core/macro";
+import {Trans} from "@lingui/react/macro";
 
 import {numberSort, stringSort, Table, TableDef} from "../../components/table";
 import {ArrayElement} from "../../utils";

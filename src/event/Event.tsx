@@ -1,6 +1,6 @@
 import {Link, Outlet, useLoaderData, useRevalidator} from "react-router";
 import {useSubscription} from "urql";
-import {Trans} from "@lingui/macro";
+import {Trans} from "@lingui/react/macro";
 
 import {Layout} from "../Layout.tsx";
 import {EventSubscriptionDocument, GetEventQuery} from "../gql";

@@ -1,7 +1,7 @@
 import {FormEvent, useState} from "react";
 import {useMaskito} from "@maskito/react";
 import type {MaskitoOptions} from "@maskito/core";
-import {t} from "@lingui/macro";
+import {t} from "@lingui/core/macro";
 
 type JidCodeInputProps = {
     onValidJidCode: (validJidCode: string | null) => void
