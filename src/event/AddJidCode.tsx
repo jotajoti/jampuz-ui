@@ -1,6 +1,6 @@
 import {forwardRef, SyntheticEvent, useImperativeHandle, useRef, useState} from "react";
 import {useMutation, UseQueryExecute} from "urql";
-import {Trans} from "@lingui/macro";
+import {Trans} from "@lingui/react/macro";
 
 import {Dialog, DialogAction, DialogRef} from "../components/Dialog.tsx";
 import {JidCodeInput} from "../components/JidCodeInput.tsx";

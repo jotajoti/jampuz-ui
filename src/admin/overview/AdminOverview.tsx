@@ -1,6 +1,7 @@
 import {useEffect} from "react";
 import {Link, Outlet, useLoaderData} from "react-router";
-import {t, Trans} from "@lingui/macro";
+import {t} from "@lingui/core/macro";
+import {Trans} from "@lingui/react/macro";
 import {PlusIcon} from "@heroicons/react/24/solid";
 
 import {Dashboard} from "../../components/Dashboard.tsx";

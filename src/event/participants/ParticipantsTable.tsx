@@ -1,5 +1,5 @@
 import {i18n} from "@lingui/core";
-import {Trans} from "@lingui/macro";
+import {Trans} from "@lingui/react/macro";
 
 import {numberSort, stringSort, Table, TableDef} from "../../components/table";
 import {ArrayElement} from "../../utils";

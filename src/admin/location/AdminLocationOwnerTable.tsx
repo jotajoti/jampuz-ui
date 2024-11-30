@@ -1,4 +1,4 @@
-import {Trans} from "@lingui/macro";
+import {Trans} from "@lingui/react/macro";
 
 import {stringSort, Table, TableDef} from "../../components/table";
 import {ArrayElement} from "../../utils";

@@ -1,5 +1,6 @@
 import {useState} from "react";
-import {t, Trans} from "@lingui/macro";
+import {t} from "@lingui/core/macro";
+import {Trans} from "@lingui/react/macro";
 import {detectLanguage, dynamicActivate, locales} from "../i18n";
 import {translateLanguage} from "../utils/languages.tsx";
 

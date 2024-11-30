@@ -1,5 +1,5 @@
 import {CombinedError} from "@urql/core";
-import {t} from "@lingui/macro";
+import {t} from "@lingui/core/macro";
 
 export enum ServerErrorCode {
     PARTICIPANT_NAME_NOT_AVAILABLE = 1,

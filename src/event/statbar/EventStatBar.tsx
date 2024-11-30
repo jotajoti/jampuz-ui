@@ -1,5 +1,5 @@
 import {i18n} from "@lingui/core";
-import {Trans} from "@lingui/macro";
+import {Trans} from "@lingui/react/macro";
 
 import {StatBar} from "../../components/StatBar.tsx";
 import {FragmentType, StatBarFragmentDoc, useFragment} from "../../gql";

@@ -1,5 +1,5 @@
-import {Trans} from "@lingui/macro";
 import {ReactNode} from "react";
+import {Trans} from "@lingui/react/macro";
 
 export const translateCountry = (countryCode: string): ReactNode => {
     switch (countryCode.toUpperCase()) {
